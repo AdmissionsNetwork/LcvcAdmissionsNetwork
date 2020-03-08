@@ -12,7 +12,10 @@
   "dependencies": {
     "iview": "^3.5.4",
     "vue": "^2.5.2",
+<<<<<<< HEAD
     "vue-concise-slider": "^3.4.4",
+=======
+>>>>>>> 75b1e889eb98e7d1810452b6f72d57462a893234
     "vue-router": "^3.1.6"
   },
   "devDependencies": {
