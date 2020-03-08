@@ -2,7 +2,7 @@
   <div>
 
     <p align="center"><img src="../assets/synopsis/实训室简介b.png" ></p>
-
+<!--修改了-->
     <div class="nv">
     <marquee direction=left height=400 scrollamount=8  scrolldelay=60 width="100%">
       <img class="nvv" border=0 src="../assets/synopsis/实训环境a.png" >
