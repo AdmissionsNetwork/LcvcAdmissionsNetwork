@@ -35,5 +35,4 @@
   background:url("../assets/major/3-bg.png") no-repeat;
   background-size: 100%;
 }
-
 </style>
