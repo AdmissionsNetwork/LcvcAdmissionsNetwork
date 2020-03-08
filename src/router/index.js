@@ -8,6 +8,10 @@ export default new VueRouter({
         {
             path:'/',
             component: () => import('@/view/Index')
+        },
+        {
+            path:'/details',
+            component: () => import('@/view/Details')
         }
     ]
 })

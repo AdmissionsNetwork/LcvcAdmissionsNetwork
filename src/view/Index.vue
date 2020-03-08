@@ -1,8 +1,23 @@
 <template>
     <div class="index">
-        <i-button type="primary">Primary</i-button>
+        <index-header></index-header>
+        <div class="main">
+            <introduction></introduction>
+        </div>
     </div>
 </template>
+<script>
+export default {
+    name:'index',
+    components:{
+        indexHeader: () => import('@/view/Index/header'),
+        introduction: () => import('@/view/Index/DepartmentIntroduction')
+    }
+}
+</script>
 <style>
-
+.index .main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 </style>
