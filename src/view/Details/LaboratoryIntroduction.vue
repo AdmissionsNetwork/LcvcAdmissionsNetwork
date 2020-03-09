@@ -1,7 +1,7 @@
 <template>
   <div class="labor">
     <p align="center">
-      <img src="@/img/title/shixunjianjieb.png" />
+      <img src="@/img/title/shixunshijianjieb.png" />
     </p>
 
     <div class="nv">
