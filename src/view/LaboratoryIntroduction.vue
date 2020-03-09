@@ -5,7 +5,7 @@
 
     <div class="nv">
     <marquee direction=left height=400 scrollamount=8  scrolldelay=60 width="100%">
-      <img class="nvv" border=0 src="../assets/synopsis/实训环境a.png" >
+      <img class="nvv" border=0 src="../assets/synopsis/实训环境b@2x.png" >
       <img border=0 src="../assets/synopsis/750VR创意开发中心.png" >
       <img  border=0 src="../assets/synopsis/现代学徒制试点实训基地a.png" >
     </marquee>
