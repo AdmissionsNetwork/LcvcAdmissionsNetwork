@@ -12,14 +12,6 @@ export default new VueRouter({
         {
             path:'/details',
             component: () => import('@/view/Details')
-        },
-        {
-            path:'/introduction',
-            component: () => import('@/view/Index/introduction')
-        },
-        {
-            path:'/table',
-            component: () => import('@/view/table')
         }
     ]
 })

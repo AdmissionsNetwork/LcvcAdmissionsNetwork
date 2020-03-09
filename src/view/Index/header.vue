@@ -13,63 +13,102 @@
         <img src="@/assets/code@2x.png" alt />
       </div>
       <div class="btn">
-        <div class="sousuo" @click="openSouSuo">
+        <!-- <div class="sousuo" @click="openSouSuo">
           <img src="@/assets/sousuo.png" alt />
-        </div>
+        </div>-->
         <div class="caidan" @click="openCaiDan">
           <img src="@/assets/caidanWhite.png" alt />
         </div>
       </div>
     </div>
-    <div class="searchbar" v-if="isShow">
-      <i-input v-model="value" placeholder="请输入..." style="width: 75%"></i-input>
-       <i-button>搜索</i-button>
-    </div>
-    <div class="caidan-item" v-if="isShowCaiDan">
-      <ul>
-        <li style="border-top: 1px solid #c0c0c0;"><span>系招生网</span></li>
-        <li><span>专业建设</span></li>
-        <li><span>软件技术</span></li>
-        <li><span>大数据应用与技术</span></li>
-        <li><span>无人机应用技术</span></li>
-        <li><span>无人机应用技术</span></li>
-      </ul>
-    </div>
     <div class="menu">
       <ul>
-        <li class="active">学院首页</li>
-        <li>系部首页</li>
-        <li>系部概况</li>
-        <li>师资队伍</li>
-        <li>专业设置</li>
-        <li>教学科研</li>
-        <li>学生管理</li>
-        <li>招生就业</li>
+        <li class="active">
+          <router-link to="http://www.lcvc.cn/">学院首页</router-link>
+        </li>
+        <li>
+          <router-link to="/http://www.lcvc.cn/Category_180/Index.aspx">系部首页</router-link>
+        </li>
+        <li>
+          <router-link to="/details">系部概况</router-link>
+        </li>
+        <li>
+          <router-link to="http://www.lcvc.cn/Category_180/Index.aspx#">师资队伍</router-link>
+        </li>
+        <li>
+          <router-link to="/">专业设置</router-link>
+        </li>
+        <li>
+          <router-link to="/">教学科研</router-link>
+        </li>
+        <li>
+          <router-link to="/">学生管理</router-link>
+        </li>
+        <li>
+          <router-link to="/">招生就业</router-link>
+        </li>
+      </ul>
+    </div>
+    <profession v-if="iszhuanye"></profession>
+    <!-- <div class="searchbar" v-if="isShow">
+      <i-input v-model="value" placeholder="请输入..." style="width: 75%"></i-input>
+       <i-button>搜索</i-button>
+    </div>-->
+    <div class="caidan-item" v-if="isShowCaiDan">
+      <ul>
+        <li style="border-top: 1px solid #c0c0c0;">
+          <router-link to="/">系招生网</router-link>
+        </li>
+        <li>
+          <router-link to="/">专业建设</router-link>
+        </li>
+        <li>
+          <router-link to="/">软件技术</router-link>
+        </li>
+        <li>
+          <router-link to="/">大数据应用与技术</router-link>
+        </li>
+        <li>
+          <router-link to="/">无人机应用技术</router-link>
+        </li>
+        <li>
+          <router-link to="/">无人机应用技术</router-link>
+        </li>
       </ul>
     </div>
   </div>
 </template>
 <script>
 export default {
+  components: {
+    profession: () => import("@/view/Details/Profession")
+  },
   data() {
     return {
       isShow: false,
-      isShowCaiDan:false,
-      value:""
+      isShowCaiDan: false,
+      value: "",
+      iszhuanye: false
     };
   },
   methods: {
     openSouSuo() {
       this.isShow = !this.isShow;
-      if(this.isShowCaiDan==true){
-        this.isShow=false
+      if (this.isShowCaiDan == true) {
+        this.isShow = false;
       }
     },
     openCaiDan() {
       this.isShowCaiDan = !this.isShowCaiDan;
-      if(this.isShow==true){
-        this.isShowCaiDan=false
+      if (this.isShow == true) {
+        this.isShowCaiDan = false;
       }
+    }
+  },
+  mounted() {
+    // console.log(this.$route.path)
+    if (this.$route.path == "/details") {
+      this.iszhuanye = true;
     }
   }
 };
@@ -164,7 +203,7 @@ export default {
 .header .caidan-item {
   width: 100%;
 }
-.header .caidan-item ul li{
+.header .caidan-item ul li {
   list-style: none;
   height: 35px;
   line-height: 35px;
@@ -174,7 +213,11 @@ export default {
   border-bottom: 1px solid #c0c0c0;
   text-align: right;
 }
-.header .caidan-item ul li span{
+.header .menu ul li a {
+  color: #fff;
+}
+.header .caidan-item ul li a {
+  color: #fff;
   margin-right: 60px;
 }
 @media screen and (max-width: 1200px) {
@@ -243,5 +286,4 @@ export default {
     margin: 1.5vh 1.5vw;
   }
 }
-
 </style>

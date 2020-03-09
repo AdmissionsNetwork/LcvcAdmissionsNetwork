@@ -1,7 +1,7 @@
 <template>
   <div class="zhuanye">
     <div class="titleImg">
-      <img src="@/img/标题切/专业群.png" />
+      <img src="@/img/title/zhuanyequn.png" />
     </div>
     <div class="options">
       <a @click="optionA" :class="activeA == 0 ? 'selected':'select'">软件专业群</a>
@@ -10,7 +10,20 @@
     </div>
     <!--  -->
     <div class="introduce" v-if="option==='1' ">
-      <img src="@/img/pic/750-大数据技术应用协同育人基地2.png" />
+      <div class="img">
+        <img :src="imgArray1[index1]" />
+        <div class="footerImg">
+          <a @click="oneimg1">
+            <img :src="footerA1==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+          </a>
+          <a @click="twoimg1">
+            <img :src="footerB1==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+          </a>
+          <a @click="threeimg1">
+            <img :src="footerC1==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+          </a>
+        </div>
+      </div>
       <div class="txt">
         <p>
           软件专业群是区内一流的互联网+软件开发与应用的人才培养基地，
@@ -29,7 +42,21 @@
     </div>
 
     <div class="introduce" v-if="option==='2' ">
-      <img src="@/img/pic/750-大数据技术应用协同育人基地2.png" />
+      <div class="img">
+        <!-- <img src="@\img\pic\750-大数据技术应用协同育人基地2.png"> -->
+        <img :src="imgArray2[index2]" />
+        <div class="footerImg">
+          <a @click="oneimg2">
+            <img :src="footerA2==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+          </a>
+          <a @click="twoimg2">
+            <img :src="footerB2==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+          </a>
+          <a @click="threeimg2">
+            <img :src="footerC2==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+          </a>
+        </div>
+      </div>
       <div class="txt">
         <p>
           网络专业群是学院重点专业、优势特色专业，包含计算机网络技术专业、
@@ -49,13 +76,19 @@
 
     <div class="introduce" v-if="option==='3' ">
       <div class="img">
-        <!-- <img src="@/img/pic/750-大数据技术应用协同育人基地2.png"> -->
-        <img :src="imgArray[index]" />
-        <!-- <div class="footerImg">
-              <a @click="oneimg"><img src="@/img/on@2x.png"></a>
-              <a @click="twoimg"><img src="@/img/on@2x.png"></a>
-              <a @click="threeimg"><img src="@/img/on@2x.png"></a>
-        </div>-->
+        <!-- <img src="@\img\pic\750-大数据技术应用协同育人基地2.png"> -->
+        <img :src="imgArray3[index3]" />
+        <div class="footerImg">
+          <a @click="oneimg3">
+            <img :src="footerA3==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+          </a>
+          <a @click="twoimg3">
+            <img :src="footerB3==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+          </a>
+          <a @click="threeimg3">
+            <img :src="footerC3==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+          </a>
+        </div>
       </div>
 
       <div class="txt">
@@ -83,16 +116,35 @@ export default {
       activeA: 0,
       activeB: -1,
       activeC: -1, //0为默认选中
-      footerA: 0, //0为选中
-      footerB: -1, //0为选中
-      footerC: -1, //0为选中
+      footerA1: 0, //0为选中
+      footerB1: -1,
+      footerC1: -1,
+
+      footerA2: 0, //0为选中
+      footerB2: -1,
+      footerC2: -1,
+
+      footerA3: 0, //0为选中
+      footerB3: -1,
+      footerC3: -1,
       option: "1",
-      index: 0,
-      imgArray: [
-        // require("@/img/pic/VR创意开发中心2a.png"),
-        require("@/img/pic/VR创意开发中心2a.png"),
-        require("@/img/pic/VR创意开发中心-footer.png"),
-        require("@/img/pic/VR创意开发中心2a.png")
+      index1: 0,
+      index2: 0,
+      index3: 0,
+      imgArray1: [
+        require("@/img/pic/dashujuxietong.png"),
+        require("@/img/pic/tonggengcenter.png"),
+        require("@/img/pic/dashujuxietong.png")
+      ],
+      imgArray2: [
+        require("@/img/pic/WechatIMG520b@2x.png"),
+        require("@/img/pic/xuetujidi.png"),
+        require("@/img/pic/dashujuxietong.png")
+      ],
+      imgArray3: [
+        require("@/img/pic/750VRchuangyikaifa.png"),
+        require("@/img/pic/dashujuxietongdandu.png"),
+        require("@/img/pic/VRchuangyicenter2b@2x.png")
       ]
     };
   },
@@ -115,14 +167,59 @@ export default {
       this.activeB = "-1";
       this.activeC = "0";
     },
-    oneimg() {
-      this.index = "0";
+    oneimg1() {
+      this.index1 = "0";
+      this.footerA1 = "0";
+      this.footerB1 = "-1";
+      this.footerC1 = "-1";
     },
-    twoimg() {
-      this.index = "1";
+    twoimg1() {
+      this.index1 = "1";
+      this.footerA1 = "-1";
+      this.footerB1 = "0";
+      this.footerC1 = "-1";
     },
-    threeimg() {
-      this.index = "2";
+    threeimg1() {
+      this.index1 = "2";
+      this.footerA1 = "-1";
+      this.footerB1 = "-1";
+      this.footerC1 = "0";
+    },
+    oneimg2() {
+      this.index2 = "0";
+      this.footerA2 = "0";
+      this.footerB2 = "-1";
+      this.footerC2 = "-1";
+    },
+    twoimg2() {
+      this.index2 = "1";
+      this.footerA2 = "-1";
+      this.footerB2 = "0";
+      this.footerC2 = "-1";
+    },
+    threeimg2() {
+      this.index2 = "2";
+      this.footerA2 = "-1";
+      this.footerB2 = "-1";
+      this.footerC2 = "0";
+    },
+    oneimg3() {
+      this.index3 = "0";
+      this.footerA3 = "0";
+      this.footerB3 = "-1";
+      this.footerC3 = "-1";
+    },
+    twoimg3() {
+      this.index3 = "1";
+      this.footerA3 = "-1";
+      this.footerB3 = "0";
+      this.footerC3 = "-1";
+    },
+    threeimg3() {
+      this.index3 = "2";
+      this.footerA3 = "-1";
+      this.footerB3 = "-1";
+      this.footerC3 = "0";
     }
   }
 };
@@ -146,7 +243,7 @@ export default {
   .introduce {
     display: flex;
     flex-flow: column;
-    
+
     box-sizing: border-box;
     /* box-sizing: border-box; */
   }
@@ -154,7 +251,7 @@ export default {
     padding: 1em;
     width: 100%;
   }
-  .introduce .txt{
+  .introduce .txt {
     padding: 1.5em;
     width: 100%;
     box-sizing: border-box;
@@ -171,7 +268,7 @@ export default {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .zhuanye{
+  .zhuanye {
     max-width: 1200px;
     padding: 1.5em;
   }
@@ -242,5 +339,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+.introduce .txt p {
+  font-size: 14px;
 }
 </style>

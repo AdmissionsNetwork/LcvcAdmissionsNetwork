@@ -1,7 +1,7 @@
 <template>
   <div class="aims">
     <div class="title">
-      <img src="@/assets/培养目标.png" alt />
+      <img src="@/assets/peiyangmvbiao.png" alt />
     </div>
     <div class="content">
       <p>
@@ -12,11 +12,11 @@
       </p>
     </div>
     <div class="photos" align="center">
-      <img src="@/assets/VR创意开发中心-footer@2x.png" alt />
+      <img src="@/assets/VRcenter-footer@2x.png" alt />
     </div>
     <div class="course">
       <div class="title">
-        <img src="@/assets/主要课程.png" alt />
+        <img src="@/assets/zhuyaokecheng.png" alt />
       </div>
       <div class="course-item">
         <div class="item" align="center">

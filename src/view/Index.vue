@@ -4,8 +4,10 @@
         <div class="main">
             <introduction></introduction>
             <introduction-tow></introduction-tow>
+            <spe></spe>
+            <labor></labor>
         </div>
-        
+        <foo></foo>
     </div>
 </template>
 <script>
@@ -14,7 +16,10 @@ export default {
     components:{
         indexHeader: () => import('@/view/Index/header'),
         introduction: () => import('@/view/Index/DepartmentIntroduction'),
-        introductionTow: () => import('@/view/Index/introduction')
+        introductionTow: () => import('@/view/Index/introduction'),
+        foo: () => import('@/view/Details/Footer'),
+        spe: () => import('@/view/Details/SpecialtyConstruction'),
+        labor: () => import('@/view/Details/LaboratoryIntroduction'),
     }
 }
 </script>

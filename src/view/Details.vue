@@ -1,17 +1,24 @@
 <template>
   <div class="details">
-    <profession></profession>
+    <index-header></index-header>
     <div class="main">
         <TrainingObjectives></TrainingObjectives>
+        <tea></tea>
+        <d-table></d-table>
     </div>
+    <foo></foo>
   </div>
 </template>
 <script>
 export default {
   // name:'details',
   components: {
-    profession: () => import("@/view/Details/Profession"),
-    TrainingObjectives: () => import("@/view/Details/TrainingObjectives")
+    indexHeader: () => import('@/view/Index/header'),
+    TrainingObjectives: () => import("@/view/Details/TrainingObjectives"),
+    tea: () => import("@/view/Details/TeachingStaff23"),
+    tea: () => import("@/view/Details/TeachingStaff23"),
+    dTable: () => import("@/view/Details/table"),
+    foo: () => import('@/view/Details/Footer'),
   }
 };
 </script>

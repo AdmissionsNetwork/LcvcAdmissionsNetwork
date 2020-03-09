@@ -1,7 +1,7 @@
 <template>
   <div class="introduction">
     <div class="title">
-      <img src="@/assets/系部简介.png" alt />
+      <img src="@/assets/xibujianjie.png" alt />
     </div>
     <div class="content">
       <p>
@@ -35,24 +35,24 @@
     <div class="photos">
       <div class="photo-item">
         <div class="item">
-          <img src="@/assets/现代学徒制试点实训基地a@2x.png" alt />
+          <img src="@/assets/jidi.png" alt />
         </div>
         <div class="item">
           <img src="@/assets/WechatIMG520b@2x.png" alt />
         </div>
         <div class="item">
-          <img src="@/assets/实训环境a@2x.png" alt />
+          <img src="@/assets/shixunhuanjing.png" alt />
         </div>
       </div>
       <div class="photo-item">
         <div class="item">
-          <img src="@/assets/750VR创意开发中心2@2x.png" alt />
+          <img src="@/assets/kaifazhongxin.png" alt />
         </div>
         <div class="item">
-          <img src="@/assets/大数据技术应用协同育人基地a@2x.png" alt />
+          <img src="@/assets/dashujujidi.png" alt />
         </div>
         <div class="item">
-          <img src="@/assets/深圳同耕协同创新研发中心a@2x.png" alt />
+          <img src="@/assets/tonggengkaifazhongxin.png" alt />
         </div>
       </div>
       <div class="photo-item">
