@@ -1,15 +1,8 @@
 <template>
 <div class="nv">
 
-<!--  <div style="position: relative; width: 100%; ">-->
-<!--    <img src="../assets/footerBg.png" width="100%" >-->
-<!--&lt;!&ndash;    <p align="center" style="position: absolute; top: 0; left: 0;">>柳州城市职业学院</p>&ndash;&gt;-->
-<!--    <span style="position: absolute; top: 0; left: 0;">学院地址：柳州市鱼峰区官塘大道文苑路1号</span>-->
-<!--    <span style="position: absolute; top: 0; left: 0;">邮编：545036  电话：0772-2756270</span>-->
-<!--  </div>-->
 <div class="nv"  v-bind:style="{height: heightData + 'px' }">
   <div align="center" class="nvv">
-
 
     <div v-if="code">
      <img src="../assets/code.png">
@@ -33,22 +26,14 @@
             return{
                 code:false,
                 heightData:135,
-                widthd: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+                // widthd: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
             }
         },
         mounted(){
-            // this.mes();
             this.setMobile();
             this.getScreen();
         },
         methods:{
-          // mes(){
-          //     var deviceWidth = document.documentElement.clientWidth || window.innerWidth
-          //     if (this.widthd<=750){
-          //         code=true;
-          //     }
-          // }
-
             getScreen(){
                 let clientWidth =document.documentElement.clientWidth || document.body.clientHeight;
 
@@ -89,9 +74,5 @@
   padding-top: 20px;
   font-size: 14px;
 }
-/*  @media screen and (min-width: 750px) {*/
-/*.nv{*/
-/*  height: 600px;*/
-/*}*/
-/*  }*/
+
 </style>
