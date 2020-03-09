@@ -116,7 +116,7 @@ export default {
       activeA: 0,
       activeB: -1,
       activeC: -1, //0为默认选中
-      footerA1: 0, //0为选中
+      footerA1: 0, //0为默认选中
       footerB1: -1,
       footerC1: -1,
 
