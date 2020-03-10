@@ -1,11 +1,8 @@
 <template>
   <div class="header">
     <div class="top">
-      <div class="logo pc">
+      <div class="logo">
         <img src="@/assets/lcvclogo.png" alt />
-      </div>
-      <div class="logo phone">
-        <img src="@/assets/lcvclogo2.png" alt />
       </div>
       <div class="search">
         <i-input>
@@ -21,37 +18,73 @@
         </div>-->
         <div class="caidan" @click="openCaiDan">
           <img src="@/assets/caidanWhite.png" alt />
-        </div>
+        </div> 
       </div>
     </div>
-    <div class="menu">
-      <ul>
-        <li class="active">
-          <router-link to="http://www.lcvc.cn/">学院首页</router-link>
-        </li>
-        <li>
-          <router-link to="/http://www.lcvc.cn/Category_180/Index.aspx">系部首页</router-link>
-        </li>
-        <li>
-          <router-link to="/details">系部概况</router-link>
-        </li>
-        <li>
-          <router-link to="http://www.lcvc.cn/Category_180/Index.aspx#">师资队伍</router-link>
-        </li>
-        <li>
-          <router-link to="/">专业设置</router-link>
-        </li>
-        <li>
-          <router-link to="/">教学科研</router-link>
-        </li>
-        <li>
-          <router-link to="/">学生管理</router-link>
-        </li>
-        <li>
-          <router-link to="/">招生就业</router-link>
-        </li>
+    <div>
+      <ul class="menu">
+          <li class="first">
+              <a href="http://www.lcvc.cn">学院首页</a>
+            </li>
+          
+            <li class="first">
+              <a href="http://www.lcvc.cn/Category_180/Index.aspx">系部首页</a>
+            </li>
+
+            <li class="first">
+              <a href="#">系部概况</a>
+            </li>   
+             
+            <li class="first">
+              <a href="#">师资队伍</a>
+              <ul class="select">
+                  <li><a href="http://www.lcvc.cn/Item/19138.aspx">网络专业团队</a></li>
+                  <li><a href="http://www.lcvc.cn/Item/19139.aspx"> 软件专业群团队</a></li>
+                  <li><a href="http://www.lcvc.cn/Item/19140.aspx">动漫专业群团队</a></li>
+                  <li><a href="http://www.lcvc.cn/Item/19141.aspx">公共基础团队</a></li>
+                  <li><a href="http://www.lcvc.cn/Item/19137.aspx">行政管理 </a></li>
+              </ul>
+            </li>
+            <li class="first">
+              <a href="#">专业设置</a>
+              <ul class="select">
+                <li><a href="http://www.lcvc.cn/Item/13786.aspx">软件专业群介绍</a></li>
+                <li><a href="http://www.lcvc.cn/Item/13787.aspx">动漫专业群介绍</a></li>
+                <li><a href="http://www.lcvc.cn/Item/13788.aspx">网络专业群介绍</a></li>
+                <li><a href="http://www.lcvc.cn/Item/13789.aspx">移动运用与开发</a></li>
+                <li><a href="http://www.lcvc.cn/Item/13790.aspx">电子商务技术</a></li>
+                <li><a href="http://www.lcvc.cn/Item/13791.aspx">电子信息工程技术</a></li>
+                <li><a href="http://www.lcvc.cn/Item/13792.aspx">物流信息技术</a></li>
+              </ul>
+            </li>
+
+            <li class="first">
+              <a href="#">教学科研</a>
+              <ul class="select">
+                <li><a href="http://www.lcvc.cn/Category_262/Index.aspx">教学与科技管理处</a></li>
+                <li><a href="http://rs.lcvc.cn/suite/portal/portalView.do;jsessionid=24BACB38CA147255DFAAD4423FDC2285?siteKey=0">数字化学习中心</a></li>
+                <li><a href="http://www.lcvc.cn/Category_661/Index.aspx">高等职业教育研究所</a></li>
+                <li><a href="http://www.lcvc.cn/Category_343/Index.aspx">科技创新</a></li>
+              </ul>
+            </li>
+
+            <li class="first">
+              <a href="#">学生管理</a>
+              <ul class="select">
+                <li><a href="http://www.lcvc.cn/Category_280/Index.aspx">学生处</a></li>
+                <li><a href="http://www.lcvc.cn/Category_293/Index.aspx">院团委</a></li>
+               </ul>
+            </li>
+
+             <li class="first">
+              <a href="#">招生就业</a>
+               <ul class="select">
+                <li><a href="http://www.lcvc.cn/Category_311/Index.aspx">招生网</a></li>
+                <li><a href="http://www.lcvc.cn/Category_323/Index.aspx">就业网</a></li>
+             </ul>
+            </li>
       </ul>
-    </div>
+  </div>
     <profession v-if="iszhuanye"></profession>
     <!-- <div class="searchbar" v-if="isShow">
       <i-input v-model="value" placeholder="请输入..." style="width: 75%"></i-input>
@@ -60,10 +93,10 @@
     <div class="caidan-item" v-if="isShowCaiDan">
       <ul>
         <li style="border-top: 1px solid #c0c0c0;">
-          <router-link to="/">系招生网</router-link>
+          <a href="http://www.lcvc.cn/Category_311/Index.aspx">系招生网</a>
         </li>
         <li>
-          <router-link to="/">专业建设</router-link>
+          <a href="http://www.lcvc.cn/Category_944/Index.aspx">专业建设</a>
         </li>
         <li>
           <router-link to="/">软件技术</router-link>
@@ -109,16 +142,8 @@ export default {
     }
   },
   mounted() {
-    var path = this.$route.path;
-    if (
-      path == "/software" ||
-      path == "/bigdata" ||
-      path == "/computerapplication" ||
-      path == "/drone" ||
-      path == "/anime" ||
-      path == "/digitalmedia" ||
-      path == "/e-commerce"
-    ) {
+    // console.log(this.$route.path)
+    if (this.$route.path == "/details") {
       this.iszhuanye = true;
     }
   }
@@ -166,23 +191,51 @@ export default {
   width: 8vw;
   margin: 2vh 2vw;
 }
-.header .menu {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  line-height: 40px;
-}
-.header .menu ul {
-  display: flex;
-  justify-content: space-between;
-}
-.header .menu ul li {
+.menu{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-around; 
+ }
+ .first{
   width: 12.5%;
+  height: 40px;
   list-style: none;
   text-align: center;
-  background: #0199d5;
-  color: #fff;
+  background: #0096D6;
+  border: 0.2px solid white;
+  
+ }
+ .first>a{
+  color: white;
+  line-height: 40px;
+  font-size: 20;
+ }
+.select{
+    display: none;
+}
+.select li{
+    list-style: none;
+    background: rgba(0, 150, 214, 0.8);
+    height: 40px;
+    border-bottom:  1px solid white;
+}
+
+.select li a{
+  color: white;
+  line-height: 40px;
+}
+.menu>li{
+    display: block;
+} 
+.menu>li a:hover  +ul {
+    display: block;
+}
+.menu>li:hover .select{
+    display: block;
+}
+.select li:hover{
+   background: #287594;
 }
 .active {
   background: #ccc;
@@ -224,19 +277,12 @@ export default {
   border-bottom: 1px solid #c0c0c0;
   text-align: right;
 }
-.header .menu ul li a {
-  color: #fff;
-}
+
 .header .caidan-item ul li a {
   color: #fff;
   margin-right: 60px;
 }
-.header .pc {
-  display: flex;
-}
-.header .phone {
-  display: none;
-}
+
 @media screen and (max-width: 1200px) {
   .header .top .qrcode img {
     width: 10vw;
@@ -274,14 +320,14 @@ export default {
 }
 @media screen and (max-width: 750px) {
   .header .top {
-    background: #0096d6;
+    background: #0199d5;
   }
   .header .top .qrcode img {
     display: none;
   }
-  /* .header .top .logo img {
-    height: 60vh;
-  } */
+  .header .top .logo img {
+    width: 35vw;
+  }
   .header .top .search {
     display: none;
   }
@@ -296,17 +342,11 @@ export default {
   }
   .header .top .logo img {
     height: 95%;
-    width: 70%;
+    width: 85%;
   }
   .header .btn {
     display: flex;
     margin: 1.5vh 1.5vw;
-  }
-  .header .pc {
-    display: none;
-  }
-  .header .phone {
-    display: flex;
   }
 }
 </style>
