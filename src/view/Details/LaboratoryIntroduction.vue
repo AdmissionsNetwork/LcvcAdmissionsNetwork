@@ -66,7 +66,6 @@
     margin-top: 20px;
     background: #FFF;
     overflow:hidden;
-    /*border: 1px dashed #CCC;*/
     width: 100%;
     margin-bottom: 20px;
 
@@ -74,8 +73,8 @@
   #demo img {
     border: 3px solid #F2F2F2;
     height: 50vh;
-    /*width: 35vw;*/
-    width: 380px;
+    margin-right: 2%;
+    width: 31%;
 
   }
   #indemo {
@@ -89,8 +88,8 @@
     float: left;
   }
   span{
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 13%;
+    margin-right: 12%;
     color: #0096D6;
   }
 </style>
