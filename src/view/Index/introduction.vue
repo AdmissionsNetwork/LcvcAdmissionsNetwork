@@ -116,7 +116,7 @@ export default {
       activeA: 0,
       activeB: -1,
       activeC: -1, //0为默认选中
-      footerA1: 0, //0为选中
+      footerA1: 0, //0为默认选中
       footerB1: -1,
       footerC1: -1,
 
@@ -243,7 +243,6 @@ export default {
   .introduce {
     display: flex;
     flex-flow: column;
-
     box-sizing: border-box;
     /* box-sizing: border-box; */
   }
@@ -262,6 +261,9 @@ export default {
   .selected {
     width: 10rem;
   }
+  .footerImg img {
+    padding: 0%;
+  }
   .options {
     display: flex;
     flex-direction: row;
@@ -274,12 +276,12 @@ export default {
   }
   .introduce img {
     float: left;
-    padding: 30px;
+    padding: 30px 30px 10px 30px;
     width: 50vw;
   }
   .introduce .txt {
     float: left;
-    padding: 30px;
+    padding: 30px 30px 0 30px;
     width: 50vw;
   }
 }
@@ -291,6 +293,9 @@ export default {
     line-height: 10rem;
   }
 }
+  .footerImg img {
+    padding: 5px 20px 10px 20px;
+  }
 .introduce {
   width: 100%;
   display: flex;
@@ -329,7 +334,7 @@ export default {
   float: left;
 }
 .footerImg img {
-  width: 5rem;
+  width: 3.2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -342,5 +347,6 @@ export default {
 }
 .introduce .txt p {
   font-size: 14px;
+  font-family: aial;
 }
 </style>
