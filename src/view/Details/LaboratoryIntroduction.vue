@@ -5,13 +5,23 @@
     </p>
 
     <div class="nv">
-      <marquee direction="left" scrollamount="8" scrolldelay="60" width="100%">
+      <marquee
+        direction="left"
+        scrollamount="8"
+        scrolldelay="60"
+        width="100%"
+        behavior="scroll"
+        onmouseout="this.start()"
+        onmouseover="this.stop()"
+      >
         <img class="nvv" border="0" src="@/img/pic/shixunhuanjinga.png" />
         <img border="0" src="@/img/pic/750VRcenter.png" />
         <img border="0" src="@/img/pic/xuetujidia.png" />
       </marquee>
     </div>
-    <div align="center" class="txt"><p>VR创意中心</p></div>
+    <div align="center" class="txt">
+      <p>VR创意中心</p>
+    </div>
   </div>
 </template>
 
@@ -29,7 +39,7 @@ export default {
   margin-top: 20px;
   height: 40vh;
 }
-.labor .txt p{
+.labor .txt p {
   font-weight: 600;
 }
 </style>

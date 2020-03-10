@@ -1,8 +1,11 @@
 <template>
   <div class="header">
     <div class="top">
-      <div class="logo">
+      <div class="logo pc">
         <img src="@/assets/lcvclogo.png" alt />
+      </div>
+      <div class="logo phone">
+        <img src="@/assets/lcvclogo2.png" alt />
       </div>
       <div class="search">
         <i-input>
@@ -106,8 +109,16 @@ export default {
     }
   },
   mounted() {
-    // console.log(this.$route.path)
-    if (this.$route.path == "/details") {
+    var path = this.$route.path;
+    if (
+      path == "/software" ||
+      path == "/bigdata" ||
+      path == "/computerapplication" ||
+      path == "/drone" ||
+      path == "/anime" ||
+      path == "/digitalmedia" ||
+      path == "/e-commerce"
+    ) {
       this.iszhuanye = true;
     }
   }
@@ -220,6 +231,12 @@ export default {
   color: #fff;
   margin-right: 60px;
 }
+.header .pc {
+  display: flex;
+}
+.header .phone {
+  display: none;
+}
 @media screen and (max-width: 1200px) {
   .header .top .qrcode img {
     width: 10vw;
@@ -257,14 +274,14 @@ export default {
 }
 @media screen and (max-width: 750px) {
   .header .top {
-    background: #0199d5;
+    background: #0096d6;
   }
   .header .top .qrcode img {
     display: none;
   }
-  .header .top .logo img {
-    width: 35vw;
-  }
+  /* .header .top .logo img {
+    height: 60vh;
+  } */
   .header .top .search {
     display: none;
   }
@@ -279,11 +296,17 @@ export default {
   }
   .header .top .logo img {
     height: 95%;
-    width: 85%;
+    width: 70%;
   }
   .header .btn {
     display: flex;
     margin: 1.5vh 1.5vw;
+  }
+  .header .pc {
+    display: none;
+  }
+  .header .phone {
+    display: flex;
   }
 }
 </style>

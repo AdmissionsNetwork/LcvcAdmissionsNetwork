@@ -6,32 +6,53 @@
 
     <div align="center" class="icon">
       <Row>
-        <router-link to="/details">
+        <router-link to="/software">
           <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-            <img src="@/img/icon/ruanjian.png" />
+            <img src="@/img/icon/ruanjianjishu.png" />
           </i-Col>
         </router-link>
-        <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-          <img src="@/img/icon/jisuanji.png" />
-        </i-Col>
-        <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-          <img src="@/img/icon/dashuju.png" />
-        </i-Col>
-        <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-          <img src="@/img/icon/yunjisuan.png" />
-        </i-Col>
-        <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-          <img src="@/img/icon/wurenji.png" />
-        </i-Col>
-        <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-          <img src="@/img/icon/dongman.png" />
-        </i-Col>
-        <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-          <img src="@/img/icon/shuzimeiti.png" />
-        </i-Col>
-        <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-          <img src="@/img/icon/dianzishangwu.png" />
-        </i-Col>
+
+        <router-link to="/computerapplication">
+          <i-Col :xs="12" :sm="12" :md="12" :lg="6">
+            <img src="@/img/icon/jisuanji.png" />
+          </i-Col>
+        </router-link>
+
+        <router-link to="/bigdata">
+          <i-Col :xs="12" :sm="12" :md="12" :lg="6">
+            <img src="@/img/icon/dashuju.png" />
+          </i-Col>
+        </router-link>
+
+        <router-link to="/computerapplication">
+          <i-Col :xs="12" :sm="12" :md="12" :lg="6">
+            <img src="@/img/icon/yunjisuan.png" />
+          </i-Col>
+        </router-link>
+
+        <router-link to="/drone">
+          <i-Col :xs="12" :sm="12" :md="12" :lg="6">
+            <img src="@/img/icon/wurenji.png" />
+          </i-Col>
+        </router-link>
+
+        <router-link to="/anime">
+          <i-Col :xs="12" :sm="12" :md="12" :lg="6">
+            <img src="@/img/icon/dongman.png" />
+          </i-Col>
+        </router-link>
+
+        <router-link to="/digitalmedia">
+          <i-Col :xs="12" :sm="12" :md="12" :lg="6">
+            <img src="@/img/icon/shuzimeiti.png" />
+          </i-Col>
+        </router-link>
+
+        <router-link to="/e-commerce">
+          <i-Col :xs="12" :sm="12" :md="12" :lg="6">
+            <img src="@/img/icon/dianzishangwu.png" />
+          </i-Col>
+        </router-link>
       </Row>
       <Row></Row>
     </div>
