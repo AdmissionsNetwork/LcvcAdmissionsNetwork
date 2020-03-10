@@ -4,6 +4,9 @@
       <div class="logo">
         <img src="@/assets/lcvclogo.png" alt />
       </div>
+      <div class="logo2">
+        <img src="@/assets/lcvclogo2.png" alt />
+      </div>
       <div class="search">
         <i-input>
           <i-button slot="append">搜索</i-button>
@@ -18,73 +21,115 @@
         </div>-->
         <div class="caidan" @click="openCaiDan">
           <img src="@/assets/caidanWhite.png" alt />
-        </div> 
+        </div>
       </div>
     </div>
     <div>
       <ul class="menu">
-          <li class="first">
-              <a href="http://www.lcvc.cn">学院首页</a>
-            </li>
-          
-            <li class="first">
-              <a href="http://www.lcvc.cn/Category_180/Index.aspx">系部首页</a>
-            </li>
+        <li class="first">
+          <a href="http://www.lcvc.cn">学院首页</a>
+        </li>
 
-            <li class="first">
-              <a href="#">系部概况</a>
-            </li>   
-             
-            <li class="first">
-              <a href="#">师资队伍</a>
-              <ul class="select">
-                  <li><a href="http://www.lcvc.cn/Item/19138.aspx">网络专业团队</a></li>
-                  <li><a href="http://www.lcvc.cn/Item/19139.aspx"> 软件专业群团队</a></li>
-                  <li><a href="http://www.lcvc.cn/Item/19140.aspx">动漫专业群团队</a></li>
-                  <li><a href="http://www.lcvc.cn/Item/19141.aspx">公共基础团队</a></li>
-                  <li><a href="http://www.lcvc.cn/Item/19137.aspx">行政管理 </a></li>
-              </ul>
-            </li>
-            <li class="first">
-              <a href="#">专业设置</a>
-              <ul class="select">
-                <li><a href="http://www.lcvc.cn/Item/13786.aspx">软件专业群介绍</a></li>
-                <li><a href="http://www.lcvc.cn/Item/13787.aspx">动漫专业群介绍</a></li>
-                <li><a href="http://www.lcvc.cn/Item/13788.aspx">网络专业群介绍</a></li>
-                <li><a href="http://www.lcvc.cn/Item/13789.aspx">移动运用与开发</a></li>
-                <li><a href="http://www.lcvc.cn/Item/13790.aspx">电子商务技术</a></li>
-                <li><a href="http://www.lcvc.cn/Item/13791.aspx">电子信息工程技术</a></li>
-                <li><a href="http://www.lcvc.cn/Item/13792.aspx">物流信息技术</a></li>
-              </ul>
-            </li>
+        <li class="first">
+          <a href="http://www.lcvc.cn/Category_180/Index.aspx">系部首页</a>
+        </li>
 
-            <li class="first">
-              <a href="#">教学科研</a>
-              <ul class="select">
-                <li><a href="http://www.lcvc.cn/Category_262/Index.aspx">教学与科技管理处</a></li>
-                <li><a href="http://rs.lcvc.cn/suite/portal/portalView.do;jsessionid=24BACB38CA147255DFAAD4423FDC2285?siteKey=0">数字化学习中心</a></li>
-                <li><a href="http://www.lcvc.cn/Category_661/Index.aspx">高等职业教育研究所</a></li>
-                <li><a href="http://www.lcvc.cn/Category_343/Index.aspx">科技创新</a></li>
-              </ul>
-            </li>
+        <li class="first">
+          <a href="#">系部概况</a>
+        </li>
 
-            <li class="first">
-              <a href="#">学生管理</a>
-              <ul class="select">
-                <li><a href="http://www.lcvc.cn/Category_280/Index.aspx">学生处</a></li>
-                <li><a href="http://www.lcvc.cn/Category_293/Index.aspx">院团委</a></li>
-               </ul>
+        <li class="first">
+          <a href="#">师资队伍</a>
+          <ul class="select">
+            <li>
+              <a href="http://www.lcvc.cn/Item/19138.aspx">网络专业团队</a>
             </li>
+            <li>
+              <a href="http://www.lcvc.cn/Item/19139.aspx">软件专业群团队</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Item/19140.aspx">动漫专业群团队</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Item/19141.aspx">公共基础团队</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Item/19137.aspx">行政管理</a>
+            </li>
+          </ul>
+        </li>
+        <li class="first">
+          <a href="#">专业设置</a>
+          <ul class="select">
+            <li>
+              <a href="http://www.lcvc.cn/Item/13786.aspx">软件专业群介绍</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Item/13787.aspx">动漫专业群介绍</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Item/13788.aspx">网络专业群介绍</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Item/13789.aspx">移动运用与开发</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Item/13790.aspx">电子商务技术</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Item/13791.aspx">电子信息工程技术</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Item/13792.aspx">物流信息技术</a>
+            </li>
+          </ul>
+        </li>
 
-             <li class="first">
-              <a href="#">招生就业</a>
-               <ul class="select">
-                <li><a href="http://www.lcvc.cn/Category_311/Index.aspx">招生网</a></li>
-                <li><a href="http://www.lcvc.cn/Category_323/Index.aspx">就业网</a></li>
-             </ul>
+        <li class="first">
+          <a href="#">教学科研</a>
+          <ul class="select">
+            <li>
+              <a href="http://www.lcvc.cn/Category_262/Index.aspx">教学与科技管理处</a>
             </li>
+            <li>
+              <a
+                href="http://rs.lcvc.cn/suite/portal/portalView.do;jsessionid=24BACB38CA147255DFAAD4423FDC2285?siteKey=0"
+              >数字化学习中心</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Category_661/Index.aspx">高等职业教育研究所</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Category_343/Index.aspx">科技创新</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="first">
+          <a href="#">学生管理</a>
+          <ul class="select">
+            <li>
+              <a href="http://www.lcvc.cn/Category_280/Index.aspx">学生处</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Category_293/Index.aspx">院团委</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="first">
+          <a href="#">招生就业</a>
+          <ul class="select">
+            <li>
+              <a href="http://www.lcvc.cn/Category_311/Index.aspx">招生网</a>
+            </li>
+            <li>
+              <a href="http://www.lcvc.cn/Category_323/Index.aspx">就业网</a>
+            </li>
+          </ul>
+        </li>
       </ul>
-  </div>
+    </div>
     <profession v-if="iszhuanye"></profession>
     <!-- <div class="searchbar" v-if="isShow">
       <i-input v-model="value" placeholder="请输入..." style="width: 75%"></i-input>
@@ -93,22 +138,33 @@
     <div class="caidan-item" v-if="isShowCaiDan">
       <ul>
         <li style="border-top: 1px solid #c0c0c0;">
-          <a href="http://www.lcvc.cn/Category_311/Index.aspx">系招生网</a>
+          <router-link to="/">系招生网</router-link>
         </li>
-        <li>
-          <a href="http://www.lcvc.cn/Category_944/Index.aspx">专业建设</a>
-        </li>
-        <li>
-          <router-link to="/">软件技术</router-link>
-        </li>
-        <li>
-          <router-link to="/">大数据应用与技术</router-link>
-        </li>
-        <li>
-          <router-link to="/">无人机应用技术</router-link>
-        </li>
-        <li>
-          <router-link to="/">无人机应用技术</router-link>
+        <li class="zhuanyelist">
+          <a @click="openList">专业建设></a>
+          <ul :class="{'openlist':list==true,'closelist':list==false}">
+            <li style="border-top: 1px solid #c0c0c0;">
+              <router-link to="/software">软件技术</router-link>
+            </li>
+            <li>
+              <router-link to="/bigdata">大数据应用与技术</router-link>
+            </li>
+            <li>
+              <router-link to="/e-commerce">电子商务技术</router-link>
+            </li>
+            <li>
+              <router-link to="/drone">无人机应用技术</router-link>
+            </li>
+            <li>
+              <router-link to="/computerapplication">计算机网络技术</router-link>
+            </li>
+            <li>
+              <router-link to="/anime">动漫制作技术</router-link>
+            </li>
+            <li>
+              <router-link to="/digitalmedia">数字媒体应用技术</router-link>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -124,7 +180,8 @@ export default {
       isShow: false,
       isShowCaiDan: false,
       value: "",
-      iszhuanye: false
+      iszhuanye: false,
+      list: false
     };
   },
   methods: {
@@ -139,6 +196,9 @@ export default {
       if (this.isShow == true) {
         this.isShowCaiDan = false;
       }
+    },
+    openList() {
+      this.list = !this.list;
     }
   },
   mounted() {
@@ -153,89 +213,108 @@ export default {
 .header {
   width: 100%;
 }
+.header .search span {
+  color: #fff !important;
+}
 .header .top {
+  height: 148px;
   display: flex;
   background: url("~@/assets/3-bg@2x.png") center center no-repeat;
   background-size: 100%;
 }
 .header .top .logo {
-  margin: 5vh 3vw;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
 }
 .header .top .logo img {
-  width: 20vw;
+  display: block;
+}
+.header .top .logo2 img {
+  display: none;
 }
 .header .top .search {
-  margin: 6vh 0;
+  display: flex;
+  align-items: center;
   margin-left: auto;
   margin-right: -30vw;
 }
 .header .top .search .ivu-input-group-append .ivu-btn,
 .ivu-input-group-prepend .ivu-btn {
-  border-color: #0199d5;
-  background-color: #0199d5;
-  color: #fff;
+  border-color: #0096d6;
+  background-color: #0096d6;
   border-radius: 0;
-  height: 6vh;
-  width: 5vw;
-  margin: -6px -7px;
+  height: 42px;
+  width: 65px;
 }
 .header .top .search .ivu-input-group .ivu-input,
 .ivu-input-group .ivu-input-inner-container {
-  height: 6vh;
-  width: 20vw;
+  height: 42px;
+  width: 274px;
+  border-radius: 0;
 }
 .header .top .qrcode {
+  display: flex;
+  align-items: center;
   margin-left: auto;
 }
 .header .top .qrcode img {
   width: 8vw;
-  margin: 2vh 2vw;
+  margin: 0 2vw;
 }
-.menu{
-     display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
-     justify-content: space-around; 
- }
- .first{
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.first {
   width: 12.5%;
   height: 40px;
   list-style: none;
   text-align: center;
-  background: #0096D6;
-  border: 0.2px solid white;
-  
- }
- .first>a{
+  background: #0096d6;
+  border: 0.2px solid #c0c0c0;
+}
+.first:hover {
+  background: #287594;
+}
+.first > a {
   color: white;
   line-height: 40px;
   font-size: 20;
- }
-.select{
-    display: none;
 }
-.select li{
-    list-style: none;
-    background: rgba(0, 150, 214, 0.8);
-    height: 40px;
-    border-bottom:  1px solid white;
+.header .select {
+  display: none;
+}
+.header .select li {
+  list-style: none;
+  background: rgba(0, 150, 214, 0.8);
+  height: 40px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.select li a{
+.header .select li a {
   color: white;
-  line-height: 40px;
+
+  word-wrap: break-word;
 }
-.menu>li{
-    display: block;
-} 
-.menu>li a:hover  +ul {
-    display: block;
+.menu > li {
+  display: block;
 }
-.menu>li:hover .select{
-    display: block;
+.menu > li a:hover + ul {
+  display: block;
 }
-.select li:hover{
-   background: #287594;
+.header .menu > li:hover .select {
+  display: block;
+  position: relative;
+  z-index: 9999;
+}
+.header .select li:hover {
+  background: #09161b;
 }
 .active {
   background: #ccc;
@@ -243,7 +322,7 @@ export default {
 .header .btn {
   margin-left: auto;
   display: flex;
-  background: #0199d5;
+  background: #0096d6;
   display: none;
 }
 .header .btn div {
@@ -273,16 +352,28 @@ export default {
   line-height: 35px;
   font-size: 12px;
   color: #fff;
-  background: #0199d5;
+  background: rgba(0, 150, 214, 0.8);
   border-bottom: 1px solid #c0c0c0;
   text-align: right;
+}
+.header .caidan-item li:hover {
+  background: #287594;
 }
 
 .header .caidan-item ul li a {
   color: #fff;
   margin-right: 60px;
 }
-
+.header .caidan-item ul .zhuanyelist ul {
+  position: relative;
+  z-index: 9999;
+}
+.openlist {
+  display: block;
+}
+.closelist {
+  display: none;
+}
 @media screen and (max-width: 1200px) {
   .header .top .qrcode img {
     width: 10vw;
@@ -292,19 +383,19 @@ export default {
     width: 25vw;
   }
   .header .top .search {
-    margin: 4vh 0;
-    margin-left: auto;
-    margin-right: -25vw;
+    display: flex;
+    align-items: center;
+    margin: 5vh auto;
   }
   .header .top .search .ivu-input-group-append .ivu-btn,
   .ivu-input-group-prepend .ivu-btn {
-    height: 5vh;
-    width: 6vw;
+    height: 36px;
+    width: 65px;
   }
   .header .top .search .ivu-input-group .ivu-input,
   .ivu-input-group .ivu-input-inner-container {
-    height: 5vh;
-    width: 20vw;
+    height: 36px;
+    width: 224px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -312,15 +403,10 @@ export default {
     width: 11vw;
     margin: 2vh 2vw;
   }
-  .header .top .search {
-    margin: 5vh 0;
-    margin-left: auto;
-    margin-right: -20vw;
-  }
 }
 @media screen and (max-width: 750px) {
   .header .top {
-    background: #0199d5;
+    background: #0096d6;
   }
   .header .top .qrcode img {
     display: none;
@@ -341,8 +427,11 @@ export default {
     margin: 1vh 1vw;
   }
   .header .top .logo img {
-    height: 95%;
-    width: 85%;
+    display: none;
+  }
+  .header .top .logo2 img {
+    display: inherit;
+    height: 96%;
   }
   .header .btn {
     display: flex;

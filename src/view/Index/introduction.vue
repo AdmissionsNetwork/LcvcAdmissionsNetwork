@@ -247,13 +247,19 @@ export default {
     /* box-sizing: border-box; */
   }
   .introduce img {
-    padding: 1em;
+    padding: 0 1em;
     width: 100%;
   }
   .introduce .txt {
     padding: 1.5em;
     width: 100%;
     box-sizing: border-box;
+  }
+  .footerImg img {
+    width: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 750px) {
@@ -284,6 +290,9 @@ export default {
     padding: 30px 30px 0 30px;
     width: 50vw;
   }
+  .footerImg img {
+    width: 3.2rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .select,
@@ -293,14 +302,14 @@ export default {
     line-height: 10rem;
   }
 }
-  .footerImg img {
-    padding: 5px 20px 10px 20px;
-  }
+.footerImg img {
+  padding: 5px 20px 10px 20px;
+}
 .introduce {
   width: 100%;
   display: flex;
 }
-.selected {
+.zhuanye .options .selected {
   background: rgba(1, 153, 213, 1);
   border-radius: 0.2rem 0.2rem;
   margin-bottom: 20px;
@@ -311,7 +320,7 @@ export default {
   line-height: 2rem;
   text-align: center;
 }
-.select {
+.zhuanye .options .select {
   border-color: rgba(1, 153, 213, 1);
   border-radius: 0.2rem 0.2rem;
   border: 1px solid rgba(1, 153, 213, 1);
@@ -332,12 +341,6 @@ export default {
 /* 测试 */
 .introduce .img {
   float: left;
-}
-.footerImg img {
-  width: 3.2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 .footerImg {
   clear: both;

@@ -1,6 +1,6 @@
 <!--<template xmlns="http://www.w3.org/1999/html">-->
 <template>
-  <div>
+  <div class="lab">
     <p align="center"><img src="@/img/title/shixunshijianjieb.png" ></p>
 
     <div id="demo">
@@ -62,7 +62,7 @@
 </script>
 
 <style scoped>
-  #demo {
+.lab #demo {
     margin-top: 20px;
     background: #FFF;
     overflow:hidden;
@@ -70,23 +70,23 @@
     width: 100%;
     margin-bottom: 20px;
   }
-  #demo img {
+.lab #demo img {
     border: 3px solid #F2F2F2;
     height: 50vh;
     /*width: 35vw;*/
     width: 380px;
   }
-  #indemo {
+.lab #indemo {
     float: left;
     width: 800%;
   }
-  #demo1 {
+.lab #demo1 {
     float: left;
   }
-  #demo2 {
+.lab #demo2 {
     float: left;
   }
-  span{
+.lab span{
     margin-left: 140px;
     margin-right: 140px;
   }

@@ -72,6 +72,7 @@
 <style>
 .introduction {
   margin: 30px 0;
+  z-index: 0;
 }
 .introduction .title {
   width: 202px;
