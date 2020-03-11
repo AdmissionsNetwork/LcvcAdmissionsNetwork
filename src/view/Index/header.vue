@@ -141,7 +141,7 @@
           <router-link to="/">系招生网</router-link>
         </li>
         <li class="zhuanyelist">
-          <a @click="openList">专业建设></a>
+          <a @click="openList">专业建设<img src="@/assets/drawup.png" alt/></a>
           <ul :class="{'openlist':list==true,'closelist':list==false}">
             <li style="border-top: 1px solid #c0c0c0;">
               <router-link to="/software">软件技术</router-link>
@@ -380,9 +380,19 @@ export default {
   color: #fff;
   margin-right: 60px;
 }
+.zhuanyelist a img{
+  height: 25%;
+  margin-left: 5px;
+}
 .header .caidan-item ul .zhuanyelist ul {
   position: relative;
   z-index: 9999;
+}
+
+.header .caidan-item ul .zhuanyelist ul li a{
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
 }
 .openlist {
   display: block;

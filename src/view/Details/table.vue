@@ -1,6 +1,6 @@
 <template>
   <div class="table">
-    <div class="titleImg">
+    <div class="title">
       <img src="@/img/title/jieyemianxiang.png" />
     </div>
     <div class="options">
@@ -126,10 +126,11 @@ export default {
 };
 </script>
 <style scoped>
-.titleImg {
-  margin: 3em 0;
-  display: flex;
-  justify-content: center;
+.title {
+  margin: 3em auto;
+}
+.title img{
+  margin-left: 10%;
 }
 @media screen and (min-width: 750px) {
   .select {
@@ -170,6 +171,6 @@ export default {
   font-size: 14px;
 }
 .options {
-  margin: 8vh auto;
+  margin-bottom: 3rem;
 }
 </style>

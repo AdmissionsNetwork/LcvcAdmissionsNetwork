@@ -16,7 +16,6 @@ export default {
     indexHeader: () => import('@/view/Index/header'),
     TrainingObjectives: () => import("@/view/Details/TrainingObjectives"),
     tea: () => import("@/view/Details/TeachingStaff23"),
-    tea: () => import("@/view/Details/TeachingStaff23"),
     dTable: () => import("@/view/Details/table"),
     foo: () => import('@/view/Details/Footer'),
   }

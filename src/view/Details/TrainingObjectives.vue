@@ -245,11 +245,11 @@ export default {
     };
   },
   mounted() {
-    this.getInfo()
+    this.getInfo();
   },
   watch: {
     $route(to, from) {
-      this.getInfo()
+      this.getInfo();
     }
   },
   methods: {
@@ -297,7 +297,7 @@ export default {
   margin: 3em auto;
 }
 .aims .title img {
-  margin-left: 15%;
+  margin-left: 10%;
 }
 .aims .content {
   margin: 20px 0;
@@ -345,11 +345,18 @@ export default {
   .aims .photos img {
     width: 65vw;
   }
+  .aims .course .course-item .border .item {
+    width: 60%;
+    height: 170px;
+    background: url("~@/assets/book@2x.png") center center no-repeat;
+    background-size: 100% 100%;
+    margin: 3vh 0;
+  }
 }
 @media screen and (max-width: 1000px) {
   .aims .course .course-item .border .item {
     width: 63%;
-    height: 170px;
+    height: 150px;
     background: url("~@/assets/book@2x.png") center center no-repeat;
     background-size: 100% 100%;
     margin: 3vh 0;
@@ -360,7 +367,7 @@ export default {
     width: 90vw;
   }
   .aims .course .course-item {
-    width: 80%;
+    width: 90%;
     display: flex;
     margin: 0 auto;
   }
@@ -377,7 +384,7 @@ export default {
     height: 80%;
   }
   .aims .course .course-item .border .item {
-    height: 150px;
+    height: 130px;
   }
   .aims .course .course-item .border .item span {
     font-size: 14px;

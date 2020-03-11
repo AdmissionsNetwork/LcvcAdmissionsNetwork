@@ -1,6 +1,6 @@
 <template>
   <div class="zhuanye">
-    <div class="titleImg">
+    <div class="title">
       <img src="@/img/title/zhuanyequn.png" />
     </div>
     <div class="options">
@@ -278,7 +278,7 @@ export default {
   }
   .zhuanye {
     max-width: 1200px;
-    padding: 1.5em;
+    /* padding: 0 1.5em; */
   }
   .introduce img {
     float: left;
@@ -332,13 +332,13 @@ export default {
   line-height: 2rem;
   text-align: center;
 }
-.titleImg {
-  margin: 20px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.title {
+  width: 202px;
+  margin: 3em auto;
 }
-/* 测试 */
+.title img {
+  margin-left: 10%;
+}
 .introduce .img {
   float: left;
 }

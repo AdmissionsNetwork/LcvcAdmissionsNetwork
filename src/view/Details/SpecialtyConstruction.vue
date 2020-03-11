@@ -1,8 +1,8 @@
 <template>
   <div>
-    <p align="center">
-      <img src="@/img/title/zhuanyejiansheb.png" />
-    </p>
+    <div class="title">
+      <img src="@/img/title/zhuanyejianshe.png" />
+    </div>
 
     <div align="center" class="icon">
       <Row>
@@ -69,15 +69,32 @@ export default {
 
 <style scoped>
 .nv {
-  margin-top: -70px;
+  margin-top: -85px;
   width: 100%;
-  height: 200px;
+  height: 180px;
   background: url("~@/img/3-bg.png") no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 .icon img {
-  margin-top: 10vh;
+  margin-top: 4em;
   width: 45%;
   height: 45%;
+}
+.title {
+  width: 202px;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+.title img {
+  margin-left: 10%;
+}
+@media screen and (max-width: 750px) {
+  .nv {
+    margin-top: -85px;
+    width: 100%;
+    height: 135px;
+    background: url("~@/img/3-bg.png") no-repeat;
+    background-size: 100% 100%;
+  }
 }
 </style>

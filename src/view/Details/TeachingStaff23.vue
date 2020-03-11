@@ -1,9 +1,9 @@
 <template>
   <div class="shixunandjiuye">
     <div v-if="isShow">
-      <p align="center" class="title">
+      <div class="title">
         <img src="@/img/title/jinengzhengshu.png" />
-      </p>
+      </div>
       <div align="center" class="certificate">
         <Row>
           <i-Col :xs="24" :sm="24" :md="24" :lg="12" v-for="(item,index) in zhengshu" :key="index">
@@ -15,10 +15,10 @@
     </div>
 
     <div class="practicaltraining">
-      <p align="center" class="title">
+      <div align="center" class="title">
         <img src="@/img/title/shixunshifenwei.png" />
-      </p>
-      <div align="center" style="margin-top: 30px">
+      </div>
+      <div align="center" class="fenwei">
         <Row>
           <i-Col :xs="24" :sm="24" :md="24" :lg="12">
             <img src="@/img/pic/750VRcenter2.png" />
@@ -105,8 +105,11 @@ export default {
 .shixunandjiuye {
   width: 100%;
 }
-.shixunandjiuye .title {
+.title {
   margin: 3em auto;
+}
+.title img{
+  margin-left: 10%;
 }
 .certificate {
   width: 100%;
@@ -115,17 +118,15 @@ export default {
   margin-top: 20px;
   width: 100%;
 }
-
 .certificate a {
   font-size: 14px;
 }
 @media screen and (max-width: 750px) {
   .practicaltraining {
-    margin-top: 20px;
     width: 100%;
-    padding: 0 1.5em;
+    padding: 0 1em;
   }
-  .practicaltraining div img {
+  .practicaltraining .fenwei img {
     width: 100%;
   }
   .certificate img {

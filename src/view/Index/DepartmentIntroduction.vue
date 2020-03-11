@@ -71,15 +71,14 @@
 </template>
 <style scoped>
 .introduction {
-  margin: 30px 0;
   z-index: 0;
 }
 .introduction .title {
   width: 202px;
-  margin: 0 auto;
+  margin: 3em auto;
 }
 .introduction .title img {
-  margin-left: 15%;
+  margin-left: 10%;
 }
 .introduction .content {
   /* text-align: center; */
