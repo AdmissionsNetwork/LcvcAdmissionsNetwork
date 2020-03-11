@@ -1,6 +1,6 @@
 <template>
   <div class="zhuanye">
-    <div class="title">
+    <div class="titleImg">
       <img src="@/img/title/zhuanyequn.png" />
     </div>
     <div class="options">
@@ -11,7 +11,13 @@
     <!--  -->
     <div class="introduce" v-if="option==='1' ">
       <div class="img">
-        <img :src="imgArray1[index1]" />
+
+        <div class="headerImg">
+           <img src="@/img/left.png"  class="leftImg" @click="left1">
+           <img :src="imgArray1[index1]" class="introduceImg"/>
+           <img src="@/img/right.png"  class="rightImg" @click="right1">
+        </div>
+       
         <div class="footerImg">
           <a @click="oneimg1">
             <img :src="footerA1==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
@@ -43,8 +49,13 @@
 
     <div class="introduce" v-if="option==='2' ">
       <div class="img">
-        <!-- <img src="@\img\pic\750-大数据技术应用协同育人基地2.png"> -->
-        <img :src="imgArray2[index2]" />
+        
+         <div class="headerImg">
+           <img src="@/img/left.png"  class="leftImg" @click="left2">
+           <img :src="imgArray2[index2]" class="introduceImg"/>
+           <img src="@/img/right.png"  class="rightImg" @click="right2">
+        </div>
+
         <div class="footerImg">
           <a @click="oneimg2">
             <img :src="footerA2==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
@@ -76,8 +87,13 @@
 
     <div class="introduce" v-if="option==='3' ">
       <div class="img">
-        <!-- <img src="@\img\pic\750-大数据技术应用协同育人基地2.png"> -->
-        <img :src="imgArray3[index3]" />
+
+        <div class="headerImg">
+           <img src="@/img/left.png"  class="leftImg" @click="left3">
+            <img :src="imgArray3[index3]" class="introduceImg"/>
+           <img src="@/img/right.png"  class="rightImg" @click="right3">
+        </div>
+
         <div class="footerImg">
           <a @click="oneimg3">
             <img :src="footerA3==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
@@ -131,20 +147,23 @@ export default {
       index1: 0,
       index2: 0,
       index3: 0,
+      //软件专业群轮播图
       imgArray1: [
-        require("@/img/pic/dashujuxietong.png"),
-        require("@/img/pic/tonggengcenter.png"),
-        require("@/img/pic/dashujuxietong.png")
+        require("@/img/pic/profession_rj1.jpg"),
+        require("@/img/pic/profession_rj2.jpg"),
+        require("@/img/pic/profession_rj3.jpg")
       ],
+      //网络专业群轮播图
       imgArray2: [
-        require("@/img/pic/WechatIMG520b@2x.png"),
-        require("@/img/pic/xuetujidi.png"),
-        require("@/img/pic/dashujuxietong.png")
+        require("@/img/pic/profession_wl1.jpg"),
+        require("@/img/pic/profession_wl2.jpg"),
+        require("@/img/pic/profession_wl1.jpg")
       ],
+      //动漫专业群轮播图
       imgArray3: [
-        require("@/img/pic/750VRchuangyikaifa.png"),
-        require("@/img/pic/dashujuxietongdandu.png"),
-        require("@/img/pic/VRchuangyicenter2b@2x.png")
+        require("@/img/pic/profession_dm1.jpg"),
+        require("@/img/pic/profession_dm2.jpg"),
+        require("@/img/pic/profession_dm3.jpg")
       ]
     };
   },
@@ -220,7 +239,134 @@ export default {
       this.footerA3 = "-1";
       this.footerB3 = "-1";
       this.footerC3 = "0";
+    },
+     left1() {
+     this.index1--;
+     if(this.index1==-1){
+        this.index1=2
+     }
+     if(this.index1==0){
+        this.footerA1=0;
+        this.footerB1=-1;
+        this.footerC1=-1;
+     }
+      if(this.index1==1){
+        this.footerA1=-1;
+        this.footerB1=0;
+        this.footerC1=-1;
+     }
+     if(this.index1==2){
+        this.footerA1=-1;
+        this.footerB1=-1;
+        this.footerC1=0;
+     }
+    },
+     right1() {
+     this.index1++;
+     if(this.index1==3){
+        this.index1=0
+     }
+      if(this.index1==0){
+        this.footerA1=0;
+        this.footerB1=-1;
+        this.footerC1=-1;
+     }
+      if(this.index1==1){
+        this.footerA1=-1;
+        this.footerB1=0;
+        this.footerC1=-1;
+     }
+     if(this.index1==2){
+        this.footerA1=-1;
+        this.footerB1=-1;
+        this.footerC1=0;
+     }
+    },
+      left2() {
+     this.index2--;
+     if(this.index2==-1){
+        this.index2=2
+     }
+     if(this.index2==0){
+        this.footerA2=0;
+        this.footerB2=-1;
+        this.footerC2=-1;
+     }
+      if(this.index2==1){
+        this.footerA2=-1;
+        this.footerB2=0;
+        this.footerC2=-1;
+     }
+     if(this.index2==2){
+        this.footerA2=-1;
+        this.footerB2=-1;
+        this.footerC2=0;
+     }
+    },
+     right2() {
+     this.index2++;
+     if(this.index2==3){
+        this.index2=0
+     }
+      if(this.index2==0){
+        this.footerA2=0;
+        this.footerB2=-1;
+        this.footerC2=-1;
+     }
+      if(this.index2==1){
+        this.footerA2=-1;
+        this.footerB2=0;
+        this.footerC2=-1;
+     }
+     if(this.index2==2){
+        this.footerA2=-1;
+        this.footerB2=-1;
+        this.footerC2=0;
+     }
+    },
+      left3() {
+     this.index3--;
+     if(this.index3==-1){
+        this.index3=2
+     }
+     if(this.index3==0){
+        this.footerA3=0;
+        this.footerB3=-1;
+        this.footerC3=-1;
+     }
+      if(this.index3==1){
+        this.footerA3=-1;
+        this.footerB3=0;
+        this.footerC3=-1;
+     }
+     if(this.index3==2){
+        this.footerA3=-1;
+        this.footerB3=-1;
+        this.footerC3=0;
+     }
+    },
+     right3() {
+     this.index3++;
+     if(this.index3==3){
+        this.index3=0
+     }
+      if(this.index3==0){
+        this.footerA3=0;
+        this.footerB3=-1;
+        this.footerC3=-1;
+     }
+      if(this.index3==1){
+        this.footerA3=-1;
+        this.footerB3=0;
+        this.footerC3=-1;
+     }
+     if(this.index3==2){
+        this.footerA3=-1;
+        this.footerB3=-1;
+        this.footerC3=0;
+     }
     }
+
   }
 };
 </script>
@@ -244,10 +390,9 @@ export default {
     display: flex;
     flex-flow: column;
     box-sizing: border-box;
-    /* box-sizing: border-box; */
   }
   .introduce img {
-    padding: 0 1em;
+    padding: 0 0.2em;
     width: 100%;
   }
   .introduce .txt {
@@ -255,7 +400,11 @@ export default {
     width: 100%;
     box-sizing: border-box;
   }
-  .footerImg img {
+  .introduce .headerImg{
+    display: flex;
+    align-items:center ;
+  }
+  .introduce .footerImg img {
     width: 3rem;
     display: flex;
     flex-direction: row;
@@ -278,13 +427,13 @@ export default {
   }
   .zhuanye {
     max-width: 1200px;
-    /* padding: 0 1.5em; */
+    padding: 1.5em;
   }
-  .introduce img {
-    float: left;
-    padding: 30px 30px 10px 30px;
-    width: 50vw;
+  .introduce .headerImg .leftImg{
+      margin-left:-10px;
   }
+  
+  .introduce
   .introduce .txt {
     float: left;
     padding: 30px 30px 0 30px;
@@ -332,17 +481,29 @@ export default {
   line-height: 2rem;
   text-align: center;
 }
-.title {
-  width: 202px;
-  margin: 3em auto;
+.zhuanye .titleImg {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.title img {
-  margin-left: 10%;
-}
-.introduce .img {
-  float: left;
-}
-.footerImg {
+  .introduce .img .headerImg{
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    width: 50vm;
+    padding: 0 30px;
+  }
+   .introduce .img .headerImg .leftImg{
+     margin: 0 5px;
+   }
+   .introduce .img .headerImg .rightImg{
+     margin: 0 5px;
+   }
+
+ .introduce .img .footerImg {
   clear: both;
   display: flex;
   flex-direction: row;
