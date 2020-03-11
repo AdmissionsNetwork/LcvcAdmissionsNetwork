@@ -1,7 +1,7 @@
 <template>
   <div>
     <p align="center">
-      <img src="@/img/title/zhuanyejiansheb.png" />
+      <img src="@/img/title/zhuanyejianshe.png" />
     </p>
 
     <div align="center" class="icon">
@@ -76,7 +76,7 @@ export default {
   background-size: 100%;
 }
 .icon img {
-  margin-top: 10vh;
+  margin-top:6vh;
   width: 45%;
   height: 45%;
 }

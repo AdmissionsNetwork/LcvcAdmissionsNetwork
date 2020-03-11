@@ -1,95 +1,93 @@
-<!--<template xmlns="http://www.w3.org/1999/html">-->
 <template>
-  <div>
-    <p align="center"><img src="@/img/title/shixunshijianjieb.png" ></p>
-
-    <div id="demo">
-
-      <div id="indemo">
-        <div id="demo1">
-          <a href="#"><img src="@/img/pic/shixunhuanjingb.png" border="0" /></a>
-          <a href="#"><img src="@/img/pic/750VRcenter.png" border="0" /></a>
-          <a href="#"><img src="@/img/pic/xuetujidib.png" border="0" /></a>
-          <div>
-            <span>实训楼的环境</span>
-            <span>750VR创意开发中心</span>
-            <span>现代学徒制试点实训基地</span>
-          </div>
+  <div style="background-color:#ffffff">
+    <!--栏目标题-->
+        <div style="padding-top: 20px;"><p align="center"><img src="@/img/title/shixunshijianjie.png" ></p></div>
+    <!--栏目内容，注意下面的id不能与其他组件的重复-->
+    <div id="recommendationProducts">
+      <!--用于放置要滚动的元素，必须要足够长，长度必须大于里面的所有元素宽度2倍（其中一个是复制另一个的DOM）总和-->
+      <div id="recommendationProductsScoll">
+        <!--防止要滚动的元素-->
+        <div id="recommendationProductsScoll1">
+          <template v-for="item in sxjj">
+            <div  style="text-align: center;">
+              <img  :src="item.image" border="0" /><br/>
+              {{item.name}}
+            </div>
+          </template>
         </div>
-        <div id="demo2"></div>
+        <!--这里用于在JS中复制要滚动的元素-->
+        <div id="recommendationProductsScollCopy"></div>
       </div>
     </div>
   </div>
-  <!--      &lt;!&ndash;  <marquee direction=left height=400 scrollamount=8  behavior="scroll"  scrolldelay=60 width="100%">&ndash;&gt;-->
-  <!--      <img class="nvv" border=0 src="../assets/synopsis/实训环境a.png" >-->
-  <!--      <img border=0 src="../assets/synopsis/750VR创意开发中心.png" >-->
-  <!--      <img  border=0 src="../assets/synopsis/现代学徒制试点实训基地a.png" >-->
-  <!--    </marquee>-->
-
 </template>
-
 <script>
+  import tu1 from '@/img/pic/shixunhuanjingb.png'
+  import tu2 from '@/img/pic/750VRcenter.png'
+  import tu3 from '@/img/pic/xuetujidi.png'
     export default {
-        name: "Demo",
-        data(){
-            return{
-
+        // 代码参考http://120.76.118.101/ebuy_web_mobile/#/
+        name: 'ProductOfRecommendationMarquee',
+        data () {
+            return {
+                sxjj: [
+                    {image:tu1,name:'实训环境'},
+                    {image:tu2,name:'750VR创意开发'},
+                    {image:tu3,name:'现代学徒制试点实训'},
+                ] // 获取产品集合
             }
         },
-        mounted(){
-            this.play();
-        },
-        methods:{
-            play(){
-                var speed=10; //数字越大速度越慢
-                var tab=document.getElementById("demo");
-                var tab1=document.getElementById("demo1");
-                var tab2=document.getElementById("demo2");
-                tab2.innerHTML=tab1.innerHTML;
-                function Marquee(){
-                    if(tab2.offsetWidth-tab.scrollLeft<=0)
-                        tab.scrollLeft-=tab1.offsetWidth
-                    else{
+        methods: {
+            play () {
+                var speed = 20; // 数字越大速度越慢
+                var tab = document.getElementById('recommendationProducts');
+                var tab1 = document.getElementById('recommendationProductsScoll1');
+                var tab2 = document.getElementById('recommendationProductsScollCopy');
+                tab2.innerHTML = tab1.innerHTML; // 复制tab1的html给tab2
+                function Marquee () {
+                    if (tab2.offsetWidth - tab.scrollLeft <= 0) {
+                        tab.scrollLeft -= tab1.offsetWidth;
+                    } else {
                         tab.scrollLeft++;
                     }
                 }
-                var MyMar=setInterval(Marquee,speed);
-                tab.onmouseover=function() {clearInterval(MyMar)};
-                tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+                var MyMar = setInterval(Marquee, speed);
+                tab.onmouseover = function () {
+                    clearInterval(MyMar)
+                };
+                tab.onmouseout = function () {
+                    MyMar = setInterval(Marquee, speed)
+                };
             }
+        },
+        mounted () {
+            this.play(); // 获取数据接口方法
         }
     }
 </script>
-
-<style>
-  #demo {
-    margin-top: 20px;
+<style  scoped>
+  #recommendationProducts {
+    margin-top: 5px;
     background: #FFF;
     overflow:hidden;
     width: 100%;
-    margin-bottom: 20px;
-
+    margin-bottom: 5px;
   }
-  #demo img {
+  #recommendationProducts img {
     border: 3px solid #F2F2F2;
-    height: 50vh;
-    margin-right: 2%;
-    width: 31%;
-
+    height: 23vw;
+    margin-right: 1vw;
+    width: 30vw;
   }
-  #indemo {
+  #recommendationProductsScoll {
     float: left;
-    width: 800%;
+    width:1400%; /*尽可能设置长，为滚动容器的两倍以上*/
   }
-  #demo1 {
+  #recommendationProductsScoll1,#recommendationProductsScollCopy {
     float: left;
-  }
-  #demo2 {
-    float: left;
-  }
-  span{
-    margin-left: 13%;
-    margin-right: 12%;
-    color: #0096D6;
+    display:-webkit-flex; /*用弹性布局来展示每个单项滚动列的内容，可以不让单项列使用float*/
+    display: flex;/*用弹性布局来展示每个单项滚动列的内容，可以不让单项列使用float*/
   }
 </style>
+
+
