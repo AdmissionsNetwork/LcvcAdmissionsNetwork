@@ -1,9 +1,9 @@
 <template>
-  <div class="nv">
-    <div class="nv">
-      <div align="center" class="nvv">
+  <div class="total">
+    <div class="total">
+      <div align="center" class="word">
         <div v-if="code">
-          <img src="@/assets/code@2x.png" />
+          <img src="@/img/footercoode.png" />
         </div>
 
         <p>学院地址：柳州市鱼峰区官塘大道文苑路1号</p>
@@ -59,22 +59,23 @@ export default {
 </script>
 
 <style scoped>
-.nv {
+  /*全部样式*/
+.total {
   width: 100%;
   /* height: 135px; */
   background: url("~@/assets/footerBg.png") no-repeat;
   /*background-size: 100%;*/
-
   background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   clear: both;
 }
-.nvv {
+/*文字样式*/
+.word {
   color: #ffffff;
   padding-top: 10px;
   font-size: 14px;
 }
-.nvv img{
+.word img{
   width: 80px;
   height: 80px;
 }
