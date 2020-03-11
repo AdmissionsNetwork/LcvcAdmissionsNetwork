@@ -71,12 +71,12 @@ export default {
         }
       }
       var MyMar = setInterval(Marquee, speed);
-      tab.onmouseover = function() {
-        clearInterval(MyMar);
-      };
-      tab.onmouseout = function() {
-        MyMar = setInterval(Marquee, speed);
-      };
+      // tab.onmouseover = function() {
+      //   clearInterval(MyMar);
+      // };
+      // tab.onmouseout = function() {
+      //   MyMar = setInterval(Marquee, speed);
+      // };
     }
   },
   mounted() {
