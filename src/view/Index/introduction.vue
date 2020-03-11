@@ -374,7 +374,7 @@ export default {
 .introduce .txt p {
   text-indent: 2em;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .select,
   .selected {
     width: 60vw;
@@ -411,7 +411,7 @@ export default {
     justify-content: center;
   }
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
   .select,
   .selected {
     width: 10rem;
