@@ -3,7 +3,7 @@
     <div class="total">
       <div align="center" class="word">
         <div v-if="code">
-          <img src="@/assets/code@2x.png" />
+          <img src="@/img/footercoode.png" />
         </div>
 
         <p>学院地址：柳州市鱼峰区官塘大道文苑路1号</p>
