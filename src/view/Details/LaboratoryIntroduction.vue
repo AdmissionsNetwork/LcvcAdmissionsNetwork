@@ -2,9 +2,9 @@
   <div style="background-color:#ffffff">
     <!--栏目标题-->
     <div style="padding-top: 20px;">
-      <p align="center">
+      <div class="title">
         <img src="@/img/title/shixunshijianjie.png" />
-      </p>
+      </div>
     </div>
     <!--栏目内容，注意下面的id不能与其他组件的重复-->
     <div id="recommendationProducts">
@@ -13,7 +13,7 @@
         <!--防止要滚动的元素-->
         <div id="recommendationProductsScoll1">
           <template v-for="item in sxjj">
-            <div style="text-align: center;" :key="item">
+            <div style="text-align: center;" :key="item.index">
               <img :src="item.image" border="0" />
               <br />
               {{item.name}}
@@ -72,6 +72,13 @@ export default {
 </script>
 
 <style  scoped>
+.title {
+  width: 202px;
+  margin: 3em auto;
+}
+.title img{
+  margin-left: 10%;
+}
 #recommendationProducts {
   margin-top: 5px;
   background: #fff;

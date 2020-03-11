@@ -35,35 +35,71 @@
     <div class="photos">
       <div class="photo-item">
         <div class="item">
-          <img src="@/assets/jidi.png" alt />
+          <picture>
+            <source media="(min-width: 751px)" srcset="@/assets/gongge/big9gg-1.png" />
+            <source media="(max-width: 750px)" srcset="@/assets/gongge/9gg-1.jpg" />
+            <img src="img/picture.png" alt="this is a picture" />
+          </picture>
         </div>
         <div class="item">
-          <img src="@/assets/WechatIMG520b@2x.png" alt />
+          <picture>
+            <source media="(min-width: 751px)" srcset="@/assets/gongge/big9gg-2.png" />
+            <source media="(max-width: 750px)" srcset="@/assets/gongge/9gg-2.jpg" />
+            <img src="img/picture.png" alt="this is a picture" />
+          </picture>
         </div>
         <div class="item">
-          <img src="@/assets/shixunhuanjing.png" alt />
+          <picture>
+            <source media="(min-width: 751px)" srcset="@/assets/gongge/big9gg-3.png" />
+            <source media="(max-width: 750px)" srcset="@/assets/gongge/9gg-3.jpg" />
+            <img src="img/picture.png" alt="this is a picture" />
+          </picture>
         </div>
       </div>
       <div class="photo-item">
         <div class="item">
-          <img src="@/assets/kaifazhongxin.png" alt />
+          <picture>
+            <source media="(min-width: 751px)" srcset="@/assets/gongge/big9gg-4.png" />
+            <source media="(max-width: 750px)" srcset="@/assets/gongge/9gg-4.jpg" />
+            <img src="img/picture.png" alt="this is a picture" />
+          </picture>
         </div>
         <div class="item">
-          <img src="@/assets/dashujujidi.png" alt />
+          <picture>
+            <source media="(min-width: 751px)" srcset="@/assets/gongge/big9gg-5.png" />
+            <source media="(max-width: 750px)" srcset="@/assets/gongge/9gg-5.jpg" />
+            <img src="img/picture.png" alt="this is a picture" />
+          </picture>
         </div>
         <div class="item">
-          <img src="@/assets/tonggengkaifazhongxin.png" alt />
+          <picture>
+            <source media="(min-width: 751px)" srcset="@/assets/gongge/big9gg-6.png" />
+            <source media="(max-width: 750px)" srcset="@/assets/gongge/9gg-6.jpg" />
+            <img src="img/picture.png" alt="this is a picture" />
+          </picture>
         </div>
       </div>
       <div class="photo-item">
         <div class="item">
-          <img src="@/assets/WechatIMG297a@2x.png" alt />
+          <picture>
+            <source media="(min-width: 751px)" srcset="@/assets/gongge/big9gg-7.png" />
+            <source media="(max-width: 750px)" srcset="@/assets/gongge/9gg-7.jpg" />
+            <img src="img/picture.png" alt="this is a picture" />
+          </picture>
         </div>
         <div class="item">
-          <img src="@/assets/WechatIMG293b@2x.png" alt />
+          <picture>
+            <source media="(min-width: 751px)" srcset="@/assets/gongge/big9gg-8.png" />
+            <source media="(max-width: 750px)" srcset="@/assets/gongge/9gg-8.jpg" />
+            <img src="img/picture.png" alt="this is a picture" />
+          </picture>
         </div>
         <div class="item">
-          <img src="@/assets/WechatIMG298b@2x.png" alt />
+          <picture>
+            <source media="(min-width: 751px)" srcset="@/assets/gongge/big9gg-9.png" />
+            <source media="(max-width: 750px)" srcset="@/assets/gongge/9gg-9.jpg" />
+            <img src="img/picture.png" alt="this is a picture" />
+          </picture>
         </div>
       </div>
     </div>
