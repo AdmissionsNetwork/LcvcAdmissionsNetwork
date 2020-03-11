@@ -1,7 +1,7 @@
 <template>
   <div class="table">
     <div class="title">
-      <img src="@/img/title/jieyemianxiang.png" />
+      <img src="@/assets/title/jieyemianxiang.png" />
     </div>
     <div class="options">
       <div class="select" v-for="(item,index) in jiuyemianxiang" :key="index">{{item.name}}</div>

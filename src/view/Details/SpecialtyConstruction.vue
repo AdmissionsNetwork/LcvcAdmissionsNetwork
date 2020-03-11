@@ -1,56 +1,56 @@
 <template>
   <div>
     <div class="title">
-      <img src="@/img/title/zhuanyejianshe.png" />
+      <img src="@/assets/title/zhuanyejianshe.png" />
     </div>
 
     <div align="center" class="icon">
       <Row>
         <router-link to="/software">
           <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-            <img src="@/img/icon/ruanjianjishu.png" />
+            <img src="@/assets/icon/ruanjianjishu.png" />
           </i-Col>
         </router-link>
 
         <router-link to="/computerapplication">
           <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-            <img src="@/img/icon/jisuanji.png" />
+            <img src="@/assets/icon/jisuanji.png" />
           </i-Col>
         </router-link>
 
         <router-link to="/bigdata">
           <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-            <img src="@/img/icon/dashuju.png" />
+            <img src="@/assets/icon/dashuju.png" />
           </i-Col>
         </router-link>
 
         <router-link to="/computerapplication">
           <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-            <img src="@/img/icon/yunjisuan.png" />
+            <img src="@/assets/icon/yunjisuan.png" />
           </i-Col>
         </router-link>
 
         <router-link to="/drone">
           <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-            <img src="@/img/icon/wurenji.png" />
+            <img src="@/assets/icon/wurenji.png" />
           </i-Col>
         </router-link>
 
         <router-link to="/anime">
           <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-            <img src="@/img/icon/dongman.png" />
+            <img src="@/assets/icon/dongman.png" />
           </i-Col>
         </router-link>
 
         <router-link to="/digitalmedia">
           <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-            <img src="@/img/icon/shuzimeiti.png" />
+            <img src="@/assets/icon/shuzimeiti.png" />
           </i-Col>
         </router-link>
 
         <router-link to="/e-commerce">
           <i-Col :xs="12" :sm="12" :md="12" :lg="6">
-            <img src="@/img/icon/dianzishangwu.png" />
+            <img src="@/assets/icon/dianzishangwu.png" />
           </i-Col>
         </router-link>
       </Row>

@@ -2,7 +2,7 @@
   <div class="shixunandjiuye">
     <div v-if="isShow">
       <div class="title">
-        <img src="@/img/title/jinengzhengshu.png" />
+        <img src="@/assets/title/jinengzhengshu.png" />
       </div>
       <div align="center" class="certificate">
         <Row>
@@ -16,7 +16,7 @@
 
     <div class="practicaltraining">
       <div align="center" class="title">
-        <img src="@/img/title/shixunshifenwei.png" />
+        <img src="@/assets/title/shixunshifenwei.png" />
       </div>
       <div align="center" class="fenwei">
         <Row>
