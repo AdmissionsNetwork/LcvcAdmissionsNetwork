@@ -487,6 +487,9 @@ export default {
   flex-direction: row;
   justify-content: center;
 }
+.introduce .img{
+  margin: 10px 0;
+}
   .introduce .img .headerImg{
     clear: both;
     display: flex;
