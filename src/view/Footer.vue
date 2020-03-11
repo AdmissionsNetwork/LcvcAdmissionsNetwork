@@ -1,8 +1,8 @@
 <template>
-<div class="nv">
+<div class="total">
 
-<div class="nv"  v-bind:style="{height: heightData + 'px' }">
-  <div align="center" class="nvv">
+<div class="total"  v-bind:style="{height: heightData + 'px' }">
+  <div align="center" class="word">
 
     <div v-if="code">
      <img src="../assets/code.png">
@@ -57,7 +57,7 @@
 </script>
 
 <style scoped>
-  .nv{
+  .total{
     width: 100%;
     height: 135px;
     background:url("../assets/footerBg.png") no-repeat;
@@ -69,7 +69,7 @@
     clear:both;
   /*background-repeat:inherit|no-repeat|repeat|repeat-x|repeat-y;*/
   }
-.nvv{
+.word{
   color: #ffffff;
   padding-top: 20px;
   font-size: 14px;

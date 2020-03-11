@@ -199,12 +199,28 @@ export default {
     },
     openList() {
       this.list = !this.list;
+    },
+    showTitle() {
+      if (
+        this.$route.path == "/software" ||
+        this.$route.path == "/bigdata" ||
+        this.$route.path == "/computerapplication" ||
+        this.$route.path == "/drone" ||
+        this.$route.path == "/anime" ||
+        this.$route.path == "/digitalmedia" ||
+        this.$route.path == "/e-commerce"
+      ) {
+        this.iszhuanye = true;
+      }
     }
   },
   mounted() {
     // console.log(this.$route.path)
-    if (this.$route.path == "/details") {
-      this.iszhuanye = true;
+    this.showTitle();
+  },
+  watch: {
+    $route(to, from) {
+      this.showTitle();
     }
   }
 };
@@ -314,7 +330,7 @@ export default {
   z-index: 9999;
 }
 .header .select li:hover {
-  background: #09161b;
+  background: #287594;
 }
 .active {
   background: #ccc;

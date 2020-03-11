@@ -20,33 +20,43 @@ export default {
     };
   },
   mounted() {
-    let path = this.$route.path;
-    if (path == "/software") {
-      //软件技术
-      this.biaoti = this.title.ruanjian;
-    } else if (path == "/bigdata") {
-      //大数据
-      this.biaoti = this.title.dashuju;
-    } else if (path == "/computerapplication") {
-      //计算机应用
-      this.biaoti = this.title.jisuanji;
-    } else if (path == "/drone") {
-      //无人机
-      this.biaoti = this.title.wurenji;
-    } else if (path == "/anime") {
-      //动漫
-      this.biaoti = this.title.dongman;
-    } else if (path == "/digitalmedia") {
-      //数字媒体
-      this.biaoti = this.title.shuzimeiti;
-    } else if (path == "/e-commerce") {
-      //电子商务
-      this.biaoti = this.title.dianzishangwu;
+    this.getInfo();
+  },
+  methods: {
+    getInfo() {
+      let path = this.$route.path;
+      if (path == "/software") {
+        //软件技术
+        this.biaoti = this.title.ruanjian;
+      } else if (path == "/bigdata") {
+        //大数据
+        this.biaoti = this.title.dashuju;
+      } else if (path == "/computerapplication") {
+        //计算机应用
+        this.biaoti = this.title.jisuanji;
+      } else if (path == "/drone") {
+        //无人机
+        this.biaoti = this.title.wurenji;
+      } else if (path == "/anime") {
+        //动漫
+        this.biaoti = this.title.dongman;
+      } else if (path == "/digitalmedia") {
+        //数字媒体
+        this.biaoti = this.title.shuzimeiti;
+      } else if (path == "/e-commerce") {
+        //电子商务
+        this.biaoti = this.title.dianzishangwu;
+      }
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.getInfo();
     }
   }
 };
 </script>
-<style>
+<style scoped>
 .profession {
   width: 100%;
   height: 15vh;

@@ -65,6 +65,7 @@
         }
     }
 </script>
+<<<<<<< HEAD
 <style  scoped>
   #recommendationProducts {
     margin-top: 5px;
@@ -89,5 +90,4 @@
     display: flex;/*用弹性布局来展示每个单项滚动列的内容，可以不让单项列使用float*/
   }
 </style>
-
 
