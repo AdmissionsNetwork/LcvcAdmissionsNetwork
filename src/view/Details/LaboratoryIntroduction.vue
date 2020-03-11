@@ -65,7 +65,7 @@
         }
     }
 </script>
-<<<<<<< HEAD
+
 <style  scoped>
   #recommendationProducts {
     margin-top: 5px;

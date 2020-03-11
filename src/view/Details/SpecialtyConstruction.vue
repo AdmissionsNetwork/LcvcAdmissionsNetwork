@@ -71,9 +71,9 @@ export default {
 .nv {
   margin-top: -70px;
   width: 100%;
-  height: 200px;
+  height: 130px;
   background: url("~@/img/3-bg.png") no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 .icon img {
   margin-top:6vh;
