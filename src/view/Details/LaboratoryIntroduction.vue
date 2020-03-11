@@ -13,7 +13,7 @@
         <!--防止要滚动的元素-->
         <div id="recommendationProductsScoll1">
           <template v-for="item in sxjj">
-            <div style="text-align: center;" :key="item">
+            <div style="text-align: center;" >
               <img :src="item.image" border="0" />
               <br />
               {{item.name}}
@@ -27,18 +27,32 @@
   </div>
 </template>
 <script>
-import tu1 from "@/img/pic/shixunhuanjingb.png";
-import tu2 from "@/img/pic/750VRcenter.png";
-import tu3 from "@/img/pic/xuetujidi.png";
+import tu1 from "@/img/sxslb/1.jpg";
+import tu2 from "@/img/sxslb/2.jpg";
+import tu3 from "@/img/sxslb/3.jpg";
+import tu4 from "@/img/sxslb/4.jpg";
+import tu5 from "@/img/sxslb/5.jpg";
+import tu6 from "@/img/sxslb/6.jpg";
+import tu7 from "@/img/sxslb/7.jpg";
+import tu8 from "@/img/sxslb/9.jpg";
+import tu9 from "@/img/sxslb/10.jpg";
+import tu10 from "@/img/sxslb/11.jpg";
 export default {
   // 代码参考http://120.76.118.101/ebuy_web_mobile/#/
-  name: "ProductOfRecommendationMarquee",
+  name: "LaboratoryIntroduction",
   data() {
     return {
       sxjj: [
-        { image: tu1, name: "实训环境" },
-        { image: tu2, name: "750VR创意开发" },
-        { image: tu3, name: "现代学徒制试点实训" }
+        { image: tu1, name: "大师工作坊" },
+        { image: tu2, name: "大数据技术应用协同育人基地" },
+        { image: tu3, name: "大数据技术应用协同育人基地2" },
+          { image: tu4, name: "深圳同耕协同创新研发中心" },
+          { image: tu5, name: "实训环境" },
+          { image: tu6, name: "实训机房" },
+          { image: tu7, name: "现代学徒制试点实训基地" },
+          { image: tu8, name: "VR创意开发中心" },
+          { image: tu9, name: "VR创意开发中心《青羽》项目组" },
+          { image: tu10, name: "VR创意开发中心2" }
       ] // 获取产品集合
     };
   },
@@ -83,7 +97,7 @@ export default {
   border: 3px solid #f2f2f2;
   height: 23vw;
   margin-right: 1vw;
-  width: 30vw;
+  width: 33vw;
 }
 #recommendationProductsScoll {
   float: left;
@@ -94,6 +108,14 @@ export default {
   float: left;
   display: -webkit-flex; /*用弹性布局来展示每个单项滚动列的内容，可以不让单项列使用float*/
   display: flex; /*用弹性布局来展示每个单项滚动列的内容，可以不让单项列使用float*/
+}
+@media screen and (max-width: 750px) {
+  #recommendationProducts img {
+    border: 3px solid #f2f2f2;
+    height: 35vw;
+    margin-right: 1vw;
+    width: 50vw;
+  }
 }
 </style>
 
