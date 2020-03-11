@@ -89,10 +89,10 @@ export default {
     };
   },
   mounted() {
-    this.getJiuYe();
+    this.getInfo();
   },
   methods: {
-    getJiuYe() {
+    getInfo() {
       let path = this.$route.path;
       if (path == "/software") {
         //软件技术
@@ -116,12 +116,16 @@ export default {
         //电子商务
         this.jiuyemianxiang = this.employment.dianzishangwu;
       }
-      // console.log(this.jiuyemianxiang);
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.getInfo()
     }
   }
 };
 </script>
-<style>
+<style scoped>
 .titleImg {
   margin: 3em 0;
   display: flex;

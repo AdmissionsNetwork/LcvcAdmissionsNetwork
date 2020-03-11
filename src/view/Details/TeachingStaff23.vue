@@ -56,30 +56,8 @@ export default {
     };
   },
   mounted() {
-    let path = this.$route.path;
-    if (path == "/software") {
-      //软件技术
-      this.zhengshu = this.certificate.ruanjian;
-    } else if (path == "/bigdata") {
-      //大数据
-      this.zhengshu = this.certificate.dashuju;
-    } else if (path == "/computerapplication") {
-      //计算机应用
-      this.zhengshu = this.certificate.jisuanji;
-    } else if (path == "/drone") {
-      //无人机
-      this.zhengshu = this.certificate.wurenji;
-    } else if (path == "/anime") {
-      //动漫
-      this.zhengshu = this.certificate.dongman;
-    } else if (path == "/digitalmedia") {
-      //数字媒体
-      this.zhengshu = this.certificate.shuzimeiti;
-    } else if (path == "/e-commerce") {
-      //电子商务
-      this.zhengshu = this.certificate.dianzishangwu;
-    }
     this.isShowZhengShu();
+    this.getInfo();
   },
   methods: {
     isShowZhengShu() {
@@ -88,6 +66,36 @@ export default {
       } else {
         this.isShow = true;
       }
+    },
+    getInfo() {
+      let path = this.$route.path;
+      if (path == "/software") {
+        //软件技术
+        this.zhengshu = this.certificate.ruanjian;
+      } else if (path == "/bigdata") {
+        //大数据
+        this.zhengshu = this.certificate.dashuju;
+      } else if (path == "/computerapplication") {
+        //计算机应用
+        this.zhengshu = this.certificate.jisuanji;
+      } else if (path == "/drone") {
+        //无人机
+        this.zhengshu = this.certificate.wurenji;
+      } else if (path == "/anime") {
+        //动漫
+        this.zhengshu = this.certificate.dongman;
+      } else if (path == "/digitalmedia") {
+        //数字媒体
+        this.zhengshu = this.certificate.shuzimeiti;
+      } else if (path == "/e-commerce") {
+        //电子商务
+        this.zhengshu = this.certificate.dianzishangwu;
+      }
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.getInfo()
     }
   }
 };
@@ -97,7 +105,7 @@ export default {
 .shixunandjiuye {
   width: 100%;
 }
-.shixunandjiuye .title{
+.shixunandjiuye .title {
   margin: 3em auto;
 }
 .certificate {
@@ -120,10 +128,10 @@ export default {
   .practicaltraining div img {
     width: 100%;
   }
-  .certificate img{
-    margin-top:-3px;
+  .certificate img {
+    margin-top: -3px;
   }
-  .certificate a{
+  .certificate a {
     line-height: 80px;
   }
 }

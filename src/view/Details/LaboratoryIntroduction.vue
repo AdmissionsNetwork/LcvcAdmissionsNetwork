@@ -61,7 +61,7 @@
     }
 </script>
 
-<style>
+<style scoped>
   #demo {
     margin-top: 20px;
     background: #FFF;

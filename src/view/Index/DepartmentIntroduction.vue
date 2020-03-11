@@ -69,7 +69,7 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .introduction {
   margin: 30px 0;
   z-index: 0;

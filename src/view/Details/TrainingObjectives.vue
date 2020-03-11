@@ -245,41 +245,50 @@ export default {
     };
   },
   mounted() {
-    let path = this.$route.path;
-    if (path == "/software") {
-      //软件技术
-      this.info.aims = this.content.aims.ruanjian;
-      this.info.course = this.content.course.ruanjian;
-    } else if (path == "/bigdata") {
-      //大数据
-      this.info.aims = this.content.aims.dashuju;
-      this.info.course = this.content.course.dashuju;
-    } else if (path == "/computerapplication") {
-      //计算机应用
-      this.info.aims = this.content.aims.jisuanji;
-      this.info.course = this.content.course.jisuanji;
-    } else if (path == "/drone") {
-      //无人机
-      this.info.aims = this.content.aims.wurenji;
-      this.info.course = this.content.course.wurenji;
-    } else if (path == "/anime") {
-      //动漫
-      this.info.aims = this.content.aims.dongman;
-      this.info.course = this.content.course.dongman;
-    } else if (path == "/digitalmedia") {
-      //数字媒体
-      this.info.aims = this.content.aims.shuzimeiti;
-      this.info.course = this.content.course.shuzimeiti;
-    } else if (path == "/e-commerce") {
-      //电子商务
-      this.info.aims = this.content.aims.dianzishangwu;
-      this.info.course = this.content.course.dianzishangwu;
+    this.getInfo()
+  },
+  watch: {
+    $route(to, from) {
+      this.getInfo()
     }
-    console.log(this.info);
+  },
+  methods: {
+    getInfo() {
+      let path = this.$route.path;
+      if (path == "/software") {
+        //软件技术
+        this.info.aims = this.content.aims.ruanjian;
+        this.info.course = this.content.course.ruanjian;
+      } else if (path == "/bigdata") {
+        //大数据
+        this.info.aims = this.content.aims.dashuju;
+        this.info.course = this.content.course.dashuju;
+      } else if (path == "/computerapplication") {
+        //计算机应用
+        this.info.aims = this.content.aims.jisuanji;
+        this.info.course = this.content.course.jisuanji;
+      } else if (path == "/drone") {
+        //无人机
+        this.info.aims = this.content.aims.wurenji;
+        this.info.course = this.content.course.wurenji;
+      } else if (path == "/anime") {
+        //动漫
+        this.info.aims = this.content.aims.dongman;
+        this.info.course = this.content.course.dongman;
+      } else if (path == "/digitalmedia") {
+        //数字媒体
+        this.info.aims = this.content.aims.shuzimeiti;
+        this.info.course = this.content.course.shuzimeiti;
+      } else if (path == "/e-commerce") {
+        //电子商务
+        this.info.aims = this.content.aims.dianzishangwu;
+        this.info.course = this.content.course.dianzishangwu;
+      }
+    }
   }
 };
 </script>
-<style>
+<style scoped>
 .aims {
   width: 100%;
 }
@@ -346,7 +355,7 @@ export default {
     margin: 3vh 0;
   }
 }
-  @media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {
   .aims .photos img {
     width: 90vw;
   }
