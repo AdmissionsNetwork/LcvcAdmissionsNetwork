@@ -123,6 +123,7 @@
 }
 .introduction .content p {
   text-indent: 2em;
+  text-align: justify;
 }
 .introduction .photos .photo-item {
   width: 100%;

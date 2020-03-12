@@ -1,8 +1,8 @@
 <template>
   <div class="zhuanye">
     <div class="titleImg">
-      <img src="@/img/title/zhuanyequn.png" />
-    </div>
+      <img src="../../assets/title/zhuanyequn.png" />
+    </div>    
     <div class="options">
       <a @click="optionA" :class="activeA == 0 ? 'selected':'select'">软件专业群</a>
       <a @click="optionB" :class="activeB == 0 ? 'selected':'select'">网络专业群</a>
@@ -12,9 +12,9 @@
     <div class="introduce" v-if="option==='1' ">
       <div class="img">
         <div class="headerImg">
-          <img src="@/img/left.png" class="leftImg" @click="left1" />
+          <img src="../../img/left2x.png" class="leftImg" @click="left1" />
           <img :src="imgArray1[index1]" class="introduceImg" />
-          <img src="@/img/right.png" class="rightImg" @click="right1" />
+          <img src="../../img/right2x.png" class="rightImg" @click="right1" />
         </div>
 
         <div class="footerImg">
@@ -49,9 +49,9 @@
     <div class="introduce" v-if="option==='2' ">
       <div class="img">
         <div class="headerImg">
-          <img src="@/img/left.png" class="leftImg" @click="left2" />
+          <img src="../../img/left2x.png" class="leftImg" @click="left2" />
           <img :src="imgArray2[index2]" class="introduceImg" />
-          <img src="@/img/right.png" class="rightImg" @click="right2" />
+          <img src="../../img/right2x.png" class="rightImg" @click="right2" />
         </div>
 
         <div class="footerImg">
@@ -86,20 +86,20 @@
     <div class="introduce" v-if="option==='3' ">
       <div class="img">
         <div class="headerImg">
-          <img src="@/img/left.png" class="leftImg" @click="left3" />
-          <img :src="imgArray3[index3]" class="introduceImg" />
-          <img src="@/img/right.png" class="rightImg" @click="right3" />
+          <img src="../../img/left2x.png" class="leftImg" @click="left3" />
+           <img :src="imgArray3[index3]" class="introduceImg" />
+           <img src="../../img/right2x.png" class="rightImg" @click="right3" />
         </div>
 
         <div class="footerImg">
           <a @click="oneimg3">
-            <img :src="footerA3==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+            <img   :src="footerA3==0 ? require('@/img/on.png')   : require('@/img/off.png') " />
           </a>
           <a @click="twoimg3">
-            <img :src="footerB3==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+              <img :src="footerB3==0 ? require('@/img/on.png')   : require('@/img/off.png')" />
           </a>
           <a @click="threeimg3">
-            <img :src="footerC3==0 ? require('@/img/on@2x.png')   : require('@/img/off@2x.png') " />
+            <img :src="footerC3==0 ? require('@/img/on.png')   : require('@/img/off.png') " />
           </a>
         </div>
       </div>
@@ -389,7 +389,7 @@ export default {
   }
   .introduce img {
     padding: 0 0.2em;
-    width: 100%;
+    width: 85%;
   }
   .introduce .txt {
     padding: 1.5em;
@@ -496,12 +496,9 @@ export default {
   width: 50vm;
   padding: 0 30px;
 }
-.introduce .img .headerImg .leftImg {
-  margin: 0 5px;
-}
-.introduce .img .headerImg .rightImg {
-  margin: 0 5px;
-}
+.introduce .headerImg .introduceImg{
+    margin: 0 5px;
+  }
 
 .introduce .img .footerImg {
   clear: both;
@@ -512,5 +509,6 @@ export default {
 .introduce .txt p {
   font-size: 14px;
   font-family: aial;
+  text-align: justify;
 }
 </style>
