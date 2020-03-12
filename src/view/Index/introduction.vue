@@ -441,10 +441,9 @@ export default {
     max-width: 1200px;
     padding: 1.5em;
   }
-  .introduce .headerImg .leftImg {
-    margin-left: -10px;
+  .introduce{
+    margin: 0 5px;
   }
-
   .introduce .introduce .txt {
     float: left;
     padding: 30px 30px 0 30px;
@@ -513,7 +512,6 @@ export default {
 .introduce .headerImg .introduceImg{
     margin: 0 5px;
   }
-
 .introduce .img .footerImg {
   clear: both;
   display: flex;
