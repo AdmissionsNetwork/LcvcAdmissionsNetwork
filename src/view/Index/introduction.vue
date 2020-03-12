@@ -367,8 +367,15 @@ export default {
 };
 </script>
 <style scoped>
-.introduce .txt p {
-  text-indent: 2em;
+@media screen and (max-width: 400px) {
+   .introduce .headerImg .rightImg{
+      max-height: 20px;
+      max-width: 20px;
+   }
+   .introduce .headerImg .leftImg{
+      max-height: 20px;
+      max-width: 20px;
+   }
 }
 @media screen and (max-width: 768px) {
   .select,
@@ -388,8 +395,7 @@ export default {
     box-sizing: border-box;
   }
   .introduce img {
-    padding: 0 0.2em;
-    width: 85%;
+    width: 100%;
   }
   .introduce .txt {
     padding: 1.5em;
@@ -400,6 +406,14 @@ export default {
     display: flex;
     align-items: center;
   }
+  .introduce .headerImg .rightImg{
+      max-height: 25px;
+      max-width: 25px;
+   }
+   .introduce .headerImg .leftImg{
+      max-height: 25px;
+      max-width: 25px;
+   }
   .introduce .footerImg img {
     width: 3rem;
     display: flex;
@@ -507,6 +521,7 @@ export default {
   justify-content: center;
 }
 .introduce .txt p {
+   text-indent: 2em;
   font-size: 14px;
   font-family: aial;
   text-align: justify;
